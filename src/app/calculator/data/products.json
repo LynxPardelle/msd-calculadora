@@ -1,0 +1,45 @@
+[
+  { "idProduct": 1, "productName": "CANCIDAS 50MG SOL INY", "pmp": 8392.36 },
+  {
+    "idProduct": 2,
+    "productName": "EMEND CAPSULAS 125 MG y 280 MG",
+    "pmp": 2367.81
+  },
+  { "idProduct": 3, "productName": "EMEND IV 150MG IV VIAL", "pmp": 3493.82 },
+  {
+    "idProduct": 4,
+    "productName": "INVANZ FRASCO ÁMPULA POLVO 1GR INY",
+    "pmp": 2139.86
+  },
+  {
+    "idProduct": 5,
+    "productName": "CUBICIN 500MG 10ML 1DOSE VIAL",
+    "pmp": 3655.89
+  },
+  {
+    "idProduct": 6,
+    "productName": "BRIDION 100 MG/ML VIAL 2ML",
+    "pmp": 30523.2
+  },
+  {
+    "idProduct": 7,
+    "productName": "ONICIT SOL. INY FA 1.5 ML",
+    "pmp": 1601.98
+  },
+  { "idProduct": 8, "productName": "ONICIT SOL. INY FA 5 ML", "pmp": 5331.54 },
+  {
+    "idProduct": 9,
+    "productName": "ESMERON CAJA CON 10 FRASCOS 5MG/5ML",
+    "pmp": 4374.81
+  },
+  {
+    "idProduct": 10,
+    "productName": "SIVEXTRO IV 200MG 6VIAL MEX",
+    "pmp": 37942.23
+  },
+  {
+    "idProduct": 11,
+    "productName": "ZERBAXA 1G/0.5G 10X20ML VIAL MEX ",
+    "pmp": 34182.70
+  }
+]

@@ -1,0 +1,21 @@
+.customText-3 {
+  color: #00635C;
+}
+.customTarget {
+  transform: translateY(-15vh);
+  -webkit-transform: translateY(-15vh);
+  -moz-transform: translateY(-15vh);
+  -ms-transform: translateY(-15vh);
+  -o-transform: translateY(-15vh);
+}
+
+.customInputQuantity {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #e4e4e4;
+  color: #3E444C;
+}
+
+.w-33 {
+  width: 33%;
+}

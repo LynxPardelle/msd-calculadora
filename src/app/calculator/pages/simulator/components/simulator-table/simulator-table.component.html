@@ -1,0 +1,73 @@
+<div class="container-fluid px-4">
+  <table class="table table-sm align-middle customTable table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">
+          <span class="customText-1 fw-bolder">UNIDADES POR PRODUCTO</span>
+        </th>
+        <th scope="col"><span class="customText-2 fw-bolder">PMP</span></th>
+        <th scope="col">
+          <span class="customText-3 fw-bolder">Precio<br />sugerido</span>
+        </th>
+        <th scope="col" style="text-align: left">
+          <span class="customText-1 px-2 fw-bolder">Unidades</span>
+        </th>
+        <th scope="col">
+          <span class="customText-2 fw-bolder"
+            >Monto total<br />Hospitalario<br />PMP</span
+          >
+        </th>
+        <th scope="col">
+          <span class="customText-3 fw-bolder"
+            >Monto Total<br />Precio Sugerido</span
+          >
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(item of productItems; track item.idProduct) {
+      <tr>
+        <td class="text-center">{{ item?.productName }}</td>
+        <td class="text-center">{{ item?.pmp | currency }}</td>
+        <td class="text-center">
+          <input
+            type="number"
+            class="form-control text-center customInputCurrency"
+            [value]="item.suggestedPrice"
+            (change)="onItemSuggestedPriceChange(item, $event)"
+          />
+        </td>
+        <td>
+          <div
+            class="d-flex flex-row justify-content-between align-items-center align-content-center gap-2"
+          >
+            <input
+              type="number"
+              style="width: 5vw"
+              class="customInputQuantity text-center flex-grow-0 flex-shrink-1"
+              [value]="item.unit"
+              (keyup)="onItemUnitChange(item, $event)"
+            />
+            <input
+              type="range"
+              class="form-control border-0 form-range w-100 flex-grow-1 flex-shrink-1"
+              id="itemQuantityRange"
+              min="0"
+              max="1000"
+              [value]="item.unit"
+              (change)="onItemUnitChange(item, $event)"
+              (keydown)="onlynumber($event)"
+            />
+          </div>
+        </td>
+        <td class="text-center">{{ item.pmpTotalAmount | currency }}</td>
+        <td>
+          <span class="form-control customInputCurrency text-center">{{
+            item.suggestedPriceTotalAmount | currency
+          }}</span>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

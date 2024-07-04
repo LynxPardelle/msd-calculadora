@@ -1,0 +1,156 @@
+[
+  {
+    "id": "1",
+    "img": "./assets/images/LogoEmendIV.png",
+    "category": [
+      "Centros Oncológicos",
+      "Centros oncológicos TOP"
+    ],
+    "txt1": "10+2",
+    "txt2": "(FREE GOOD)",
+    "txt3": "C.O. a través de Distribuidor"
+  },
+  {
+    "id": "2",
+    "img": "./assets/images/LogoEmend.png",
+    "category": [
+      "Centros Oncológicos",
+      "Centros oncológicos TOP"
+    ],
+    "txt1": "10+1",
+    "txt2": "(FREE GOOD)",
+    "txt3": "C.O. a través de Distribuidor"
+  },
+  {
+    "id": "1.5",
+    "img": "./assets/images/LogoEmendIV.png",
+    "category": [
+      "Hospitales"
+    ],
+    "txt1": "10+2",
+    "txt2": "(FREE GOOD)",
+    "txt3": "Hospitales a través de Distribuidor"
+  },
+  {
+    "id": "2.5",
+    "img": "./assets/images/LogoEmend.png",
+    "category": [
+      "Hospitales"
+    ],
+    "txt1": "10+1",
+    "txt2": "(FREE GOOD)",
+    "txt3": "Hospitales a través de Distribuidor"
+  },
+  {
+    "id": "3",
+    "img": "./assets/images/LogoKeytruda.png",
+    "category": ["Centros oncológicos TOP"],
+    "txt1": "10%",
+    "txt2": "(NC , Descuento sobre PMP)",
+    "txt3": "C.O. a través de Distribuidor"
+  },
+  {
+    "id": "4",
+    "img": "./assets/images/LogoKeytruda.png",
+    "category": ["Hospitales"],
+    "txt1": "4%",
+    "txt2": "(NC , Descuento sobre PMP)",
+    "txt3": "Hospitales a través de Distribuidor"
+  },
+  {
+    "id": "5",
+    "img": "./assets/images/LogoInvanz.png",
+    "category": ["Cadenas de farmacias"],
+    "txt1": "4+1",
+    "txt2": "(FREE GOOD)",
+    "txt3": "Cadenas de Farmacias"
+  },
+  {
+    "id": "6",
+    "img": "./assets/images/LogoCancidas.png",
+    "category": ["Hospitales"],
+    "txt1": "43%",
+    "txt2": "(NC , Descuento sobre PMP)",
+    "txt3": "Hospitales a través de Distribuidor"
+  },
+  {
+    "id": "7",
+    "img": "./assets/images/LogoCancidas.png",
+    "category": ["Hospitales"],
+    "txt1": "Precio Especial",
+    "txt2": "(Precio Especial de acuerdo al tipo de Hospital)",
+    "txt3": "Hospitales a traves de Distribuidor"
+  },
+  {
+    "id": "8",
+    "img": "./assets/images/LogoZerbaxa.png",
+    "category": ["Hospitales"],
+    "txt1": "13%",
+    "txt2": "(NC , Descuento sobre PMP)",
+    "txt3": "Hospitales a traves de Distribuidor"
+  },
+  {
+    "id": "9",
+    "img": "./assets/images/LogoBridion.png",
+    "category": ["Hospitales"],
+    "txt1": "7+1 y 10+2",
+    "txt2": "(FREE GOOD)",
+    "txt3": "Centros Bariátricos a través de Distribuidor"
+  },
+  {
+    "id": "10",
+    "img": "./assets/images/LogoEsmeron.png",
+    "category": ["Hospitales"],
+    "txt1": "3+1",
+    "txt2": "(FREE GOOD)",
+    "txt3": "Hospitales a traves de Distribuidor"
+  },
+  {
+    "id": "11",
+    "img": "./assets/images/GARDASIL9_L_MEX_PE.png",
+    "category": ["Clientes TOP Vacunas"],
+    "txt1": "4%",
+    "txt2": "De Rebote Mensual a cuotas de volumen",
+    "txt3": "Clientes TOP Vacunas"
+  },
+  {
+    "id": "12",
+    "img": "./assets/images/ROTATEQ_L_RA-CO-MEX-YV-CARD.png",
+    "category": ["Clientes TOP Vacunas"],
+    "txt1": "6%",
+    "txt2": "De Rebote Mensual a cuotas de volumen",
+    "txt3": "Clientes TOP Vacunas"
+  },
+  {
+    "id": "13",
+    "img": "./assets/images/VAQTA_L(MEX).png",
+    "category": ["Clientes TOP Vacunas"],
+    "txt1": "6%",
+    "txt2": "De Rebote Mensual a cuotas de volumen",
+    "txt3": "Clientes TOP Vacunas"
+  },
+  {
+    "id": "15",
+    "img": "./assets/images/MMR_II_L(MEX)_color.png",
+    "category": ["Clientes TOP Vacunas"],
+    "txt1": "6%",
+    "txt2": "De Rebote Mensual a cuotas de volumen",
+    "txt3": "Clientes TOP Vacunas"
+  },
+  {
+    "id": "16",
+    "img": "./assets/images/VARIVAX_III_L_MEX.png",
+    "category": ["Clientes TOP Vacunas"],
+    "txt1": "6%",
+    "txt2": "De Rebote Mensual a cuotas de volumen",
+    "txt3": "Clientes TOP Vacunas"
+  },
+  {
+    "id": "17",
+    "img": "./assets/images/LogoKeytruda.png",
+    "category": ["Centros Oncológicos"],
+    "txt1": "8%",
+    "txt2": "(NC , Descuento sobre PMP)",
+    "txt3": "C.O. a través de Distribuidor"
+  }
+]

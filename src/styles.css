@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "customGothamXLight";
+  src: url("./assets/fonts/GothamXLight.otf");
+}
+
+@font-face {
+  font-family: "customGothamLight";
+  src: url("./assets/fonts/GothamLight.otf");
+}
+
+@font-face {
+  font-family: "customGothamBook";
+  src: url("./assets/fonts/GothamBook.otf");
+}
+
+@font-face {
+  font-family: "customGothamMedium";
+  src: url("./assets/fonts/GothamMedium.otf");
+}
+
+@font-face {
+  font-family: "customGothamBold";
+  src: url("./assets/fonts/GothamBold.otf");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-size: 14px;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: "customGothamMedium", sans-serif;
+}

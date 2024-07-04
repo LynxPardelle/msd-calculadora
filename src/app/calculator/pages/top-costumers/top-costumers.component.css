@@ -1,0 +1,95 @@
+* {
+  font-size: 14px;
+}
+
+.customText1 {
+  color: #00635c;
+}
+
+.text2 {
+  color: #3e444c;
+}
+
+.customCardStyle1 {
+  bottom: 10% !important;
+  border: none;
+  border-radius: 2vw;
+  background: #E9E8E8;
+  background: -moz-linear-gradient(
+    90deg,
+    #E9E8E8 0%,
+    #DCDBDB 36%,
+    #BDBAB9 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #E9E8E8 0%,
+    #DCDBDB 36%,
+    #BDBAB9 100%
+  );
+  background: linear-gradient(
+    90deg,
+    #E9E8E8 0%,
+    #DCDBDB 36%,
+    #BDBAB9 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e0e0e0",endColorstr="#adadad",GradientType=1);
+}
+
+.customCardStyle2 {
+  border: none;
+  background: rgb(249, 255, 253);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(249, 255, 253, 1) 0%,
+    rgba(145, 200, 190, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(249, 255, 253, 1) 0%,
+    rgba(145, 200, 190, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(249, 255, 253, 1) 0%,
+    rgba(145, 200, 190, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9fffd",endColorstr="#91c8be",GradientType=1);
+}
+
+.customHomeMenuBtn {
+  padding: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  border-radius: 1.5vw;
+  left: 5vw !important;
+  bottom: 2vw !important;
+  background: #56A39F;
+  background: -moz-linear-gradient(
+    90deg,
+    #56A39F 0%,
+    #499995 22%,
+    #26807A 62%,
+    #00635C 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #56A39F 0%,
+    #499995 22%,
+    #26807A 62%,
+    #00635C 100%
+  );
+  background: linear-gradient(
+    90deg,
+    #56A39F 0%,
+    #499995 22%,
+    #26807A 62%,
+    #00635C 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c2b6",endColorstr="#00827a",GradientType=1);
+
+  border: none;
+  color: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  font-family: "customGothamBook", sans-serif;
+}
