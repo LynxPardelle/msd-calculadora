@@ -5,14 +5,8 @@
   <div
     class="pt-3 flex-grow-0 flex-shrink-0 d-flex flex-row justify-content-between align-items-center align-content-center px-4"
   >
-    <img
-      src="./assets/images/slide2/B01_LogoTitulo.png"
-      alt="Logo"
-      class="img-fluid"
-    />
-    @if(enableDiscount){
+    <img src="{{ logoUrl }}" alt="Logo" class="img-fluid" />
     <app-discount></app-discount>
-    }
   </div>
   <div class="flex-grow-1 flex-shrink-1 align-self-stretch overflow-auto">
     <router-outlet></router-outlet>

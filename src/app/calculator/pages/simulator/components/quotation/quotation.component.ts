@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { SimulatorService } from '../../../../services/simulator.service';
+import { createMask } from '@ngneat/input-mask';
 
 @Component({
   selector: 'app-quotation',
@@ -8,6 +9,14 @@ import { SimulatorService } from '../../../../services/simulator.service';
 })
 export class QuotationComponent {
   private _SimulatorService = inject(SimulatorService);
+  public currencyInputMask = createMask({
+    alias: 'numeric',
+    groupSeparator: ',',
+    digits: 2,
+    digitsOptional: false,
+    prefix: '$ ',
+    placeholder: '0',
+  });
 
   get computedQuotation() {
     return this._SimulatorService.computedQuotation();

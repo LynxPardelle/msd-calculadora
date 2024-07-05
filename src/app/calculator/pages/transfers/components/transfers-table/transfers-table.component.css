@@ -142,3 +142,11 @@ input[type="range"]::-webkit-slider-thumb {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c2b6",endColorstr="#00827a",GradientType=1);
 }
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}

@@ -46,7 +46,7 @@ export class TransfersComponent implements OnInit {
   get products() {
     return this._simulatorService.simulatorItemValues2().filter((item) => {
       if ([4, 6, 9].includes(item.idProduct)) {
-        console.log(item);
+        // console.log(item);
         return item;
       } else {
         return null;
@@ -56,7 +56,7 @@ export class TransfersComponent implements OnInit {
   get reSortedProducts() {
     let prods = this._simulatorService.simulatorItemValues2().filter((item) => {
       if ([4, 6, 9].includes(item.idProduct)) {
-        console.log(item);
+        // console.log(item);
         return item;
       } else {
         return null;

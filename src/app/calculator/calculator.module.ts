@@ -11,6 +11,7 @@ import { SimulatorTableComponent } from './pages/simulator/components/simulator-
 import { QuotationComponent } from './pages/simulator/components/quotation/quotation.component';
 import { TransfersTableComponent } from './pages/transfers/components/transfers-table/transfers-table.component';
 import { TransfersQuotationComponent } from './pages/transfers/components/transfers-quotation/transfers-quotation.component';
+import { InputMaskModule } from '@ngneat/input-mask';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,6 @@ import { TransfersQuotationComponent } from './pages/transfers/components/transf
     QuotationComponent,
     TransfersQuotationComponent,
   ],
-  imports: [CommonModule, CalculatorRoutingModule],
+  imports: [CommonModule, CalculatorRoutingModule, InputMaskModule],
 })
 export class CalculatorModule {}

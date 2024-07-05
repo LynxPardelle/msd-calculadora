@@ -1,6 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { Products } from '../../../../interfaces/simulator';
 import { SimulatorService } from '../../../../services/simulator.service';
+import { createMask } from '@ngneat/input-mask';
 
 @Component({
   selector: 'app-simulator-table',
@@ -9,6 +10,14 @@ import { SimulatorService } from '../../../../services/simulator.service';
 })
 export class SimulatorTableComponent {
   @Input({ required: true }) productItems: Products[] = [];
+  public currencyInputMask = createMask({
+    alias: 'numeric',
+    groupSeparator: ',',
+    digits: 2,
+    digitsOptional: false,
+    prefix: '$ ',
+    placeholder: '0',
+  });
 
   private _simulatorService = inject(SimulatorService);
 

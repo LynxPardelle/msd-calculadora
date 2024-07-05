@@ -8,6 +8,8 @@ import {
 
 import * as productsJson from '../data/products.json';
 import * as offersJson from '../data/offers.json';
+import { Location } from '@angular/common';
+import { logo } from '../../../../../novo-calculator/src/app/shared/services/svgs/logo.svg';
 
 @Injectable({
   providedIn: 'root',
@@ -18,9 +20,12 @@ export class SimulatorService {
   private _textPayRelease: string =
     'Sitio de demostración, prohibido comercializar.';
 
-  products: Products[] = (productsJson as any).default;
-  offers: Offer[] = (offersJson as any).default;
-  enableDiscount: boolean = false;
+  public products: Products[] = (productsJson as any).default;
+  public offers: Offer[] = (offersJson as any).default;
+  public enableDiscount: boolean = false;
+  public enableInventarioYCaducidades: boolean = false;
+  public inventariosCaducidadesUrl: string = '';
+  public logoUrl: string = './assets/images/slide2/B01_LogoTitulo.png';
   topClientsGardasilPrice: number = 2506.6;
 
   simulatorDiscountValue = signal<number>(0);
@@ -30,7 +35,7 @@ export class SimulatorService {
       ...product,
       unit: 0,
       pmpTotalAmount: 0,
-      suggestedPrice: 0,
+      suggestedPrice: product.pmp,
       suggestedPriceTotalAmount: 0,
       transferPriceTotalAmount: 0,
     }))
@@ -41,7 +46,7 @@ export class SimulatorService {
       ...product,
       unit: 0,
       pmpTotalAmount: 0,
-      suggestedPrice: 0,
+      suggestedPrice: product.pmp,
       suggestedPriceTotalAmount: 0,
       transferPriceTotalAmount: 0,
       itemDiscount: 0,
@@ -135,5 +140,23 @@ export class SimulatorService {
 
   get textPayRelease() {
     return this._textPayRelease;
+  }
+
+  constructor(private _location: Location) {
+    this._location.onUrlChange((url) => {
+      this.enableInventarioYCaducidades = false;
+      this.logoUrl = './assets/images/slide2/B01_LogoTitulo.png';
+      if (url.includes('simulator')) {
+        this.inventariosCaducidadesUrl =
+          'https://www.google.com/url?q=https://app.powerbi.com/groups/me/reports/83b3455d-acc1-4eaf-8660-6fdf027ae4aa/ReportSectionf86d32d8d0dc1c674701?experience%3Dpower-bi&sa=D&source=editors&ust=1720212778800411&usg=AOvVaw2W4FoCnuDepv7LXpa18NEk';
+        this.enableInventarioYCaducidades = true;
+      } else if (url.includes('transfers')) {
+        this.inventariosCaducidadesUrl =
+          'https://www.google.com/url?q=https://app.powerbi.com/groups/me/reports/83b3455d-acc1-4eaf-8660-6fdf027ae4aa/ReportSectionf86d32d8d0dc1c674701?experience%3Dpower-bi&sa=D&source=editors&ust=1720212778799132&usg=AOvVaw0fgkABUEslHsWIwsCKqT61';
+        this.enableInventarioYCaducidades = true;
+      } else if (url.includes('top-costumers')) {
+        this.logoUrl = './assets/images/slide4/D01_LogoTitulo.png';
+      }
+    });
   }
 }

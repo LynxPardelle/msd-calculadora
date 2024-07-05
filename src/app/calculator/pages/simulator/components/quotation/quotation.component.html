@@ -35,16 +35,13 @@
         OBJETIVO TRIMESTRAL
       </p>
       <div class="col-4 text-center">
-        <div class="input-group">
-          <span class="input-group-text text2 p-1">$</span>
-          <input
-            type="number"
-            class="form-control text-center p-0 text2"
-            placeholder="0"
-            [value]="trimestralObjectiveValue"
-            (change)="onChangeTrimestralObjetiveValue($event)"
-          />
-        </div>
+        <input
+          [inputMask]="currencyInputMask"
+          placeholder="$ 0.00"
+          class="form-control text-center p-0 text2"
+          [value]="trimestralObjectiveValue"
+          (change)="onChangeTrimestralObjetiveValue($event)"
+        />
       </div>
     </div>
   </div>

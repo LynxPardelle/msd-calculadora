@@ -31,10 +31,11 @@
         <td class="text-center">{{ item?.pmp | currency }}</td>
         <td class="text-center">
           <input
-            type="number"
+            [inputMask]="currencyInputMask"
             class="form-control text-center customInputCurrency"
             [value]="item.suggestedPrice"
             (change)="onItemSuggestedPriceChange(item, $event)"
+            placeholder="$ 0.00"
           />
         </td>
         <td>

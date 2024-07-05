@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 import { DiscountComponent } from './shared/components/discount/discount.component';
+import { InputMaskModule } from '@ngneat/input-mask';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { DiscountComponent } from './shared/components/discount/discount.compone
     CommonModule,
     HttpClientModule,
     RouterOutlet,
+    InputMaskModule.forRoot({ inputSelector: 'input', isAsync: true }),
   ],
   providers: [
     provideAnimationsAsync(),

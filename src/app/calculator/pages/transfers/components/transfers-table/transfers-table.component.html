@@ -30,10 +30,11 @@
       <td class="text-center">{{ item?.pmp | currency }}</td>
       <td class="text-center">
         <input
-          type="number"
+          [inputMask]="currencyInputMask"
           class="form-control text-center customInputCurrency"
           [value]="item.suggestedPrice"
           (change)="onItemSuggestedPriceChange(item, $event)"
+          placeholder="$ 0.00"
         />
       </td>
       <td>
@@ -72,7 +73,7 @@
       </td>
       <td>
         <input
-          type="number"
+          [inputMask]="percentInputMask"
           class="form-control text-center customInputCurrencyDesc"
           [value]="item.itemDiscount"
           (change)="onItemDiscountChange(item, $event)"
@@ -82,3 +83,15 @@
     }
   </tbody>
 </table>
+@if (showPopUp !== 0) {
+<img
+  src="{{
+    showPopUp === 1
+      ? './assets/images/PROGRAMA HOSPITALARIO MSD-06.svg'
+      : './assets/images/PROGRAMA HOSPITALARIO MSD-05.svg'
+  }}"
+  class="popup"
+  alt="Advertencia"
+  (click)="showPopUp = 0"
+/>
+}

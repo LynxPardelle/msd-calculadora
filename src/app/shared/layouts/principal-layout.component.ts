@@ -9,8 +9,7 @@ import { SimulatorService } from '../../calculator/services/simulator.service';
 export class PrincipalLayoutComponent {
   private simulatorService = inject(SimulatorService);
   constructor() {}
-
-  get enableDiscount() {
-    return this.simulatorService.enableDiscount;
+  get logoUrl() {
+    return this.simulatorService.logoUrl;
   }
 }
