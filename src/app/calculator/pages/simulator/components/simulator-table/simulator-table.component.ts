@@ -24,7 +24,9 @@ export class SimulatorTableComponent {
   onItemSuggestedPriceChange(product: Products, event: Event): void {
     const target = event.target as HTMLInputElement;
     const value = target.value;
-    const suggestedPrice = parseFloat(value);
+    const suggestedPrice = parseFloat(
+      value.replace(/\$/, '').replace(/,/g, '').trim()
+    );
 
     this._simulatorService.simulatorItemValues.set(
       this.productItems.map((productItem) => {

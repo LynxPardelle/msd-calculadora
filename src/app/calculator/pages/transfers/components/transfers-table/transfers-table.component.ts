@@ -30,7 +30,9 @@ export class TransfersTableComponent {
   onItemSuggestedPriceChange(product: Products, event: Event): void {
     const target = event.target as HTMLInputElement;
     const value = target.value;
-    const suggestedPrice = parseFloat(value);
+    const suggestedPrice = parseFloat(
+      value.replace(/\$/, '').replace(/,/g, '').trim()
+    );
 
     this._simulatorService.simulatorItemValues2.set(
       this.productItems.map((productItem) => {

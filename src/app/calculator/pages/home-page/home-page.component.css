@@ -9,6 +9,12 @@
   background-position: 0% 50%;
   background-origin: content-box;
 }
+.miniText {
+  font-size: 0.8rem;
+  color: #fff;
+  font-family: "customGothamBook", sans-serif;
+  text-align: center;
+}
 .msdLogo {
   position: absolute;
   top: 6rem;

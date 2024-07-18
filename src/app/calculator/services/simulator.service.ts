@@ -67,27 +67,37 @@ export class SimulatorService {
       (acc, product) => acc + product.pmpTotalAmount,
       0
     );
+    console.log('montoTotalHospitalPmp', montoTotalHospitalPmp);
     const montoTotalPrecioSugerido = this.simulatorItemValues().reduce(
       (acc, product) => acc + product.suggestedPriceTotalAmount,
       0
     );
+    console.log('montoTotalPrecioSugerido', montoTotalPrecioSugerido);
     const montoTotalPrecioTransfer = this.simulatorItemValues().reduce(
       (acc, product) => acc + (product.transferPriceTotalAmount || 0),
       0
     );
+    console.log('montoTotalPrecioTransfer', montoTotalPrecioTransfer);
+    const objetivoTrimestral = this.simulatorObjectiveValue();
+    console.log('objetivoTrimestral', objetivoTrimestral);
+    const variacionDescuento =
+      montoTotalHospitalPmp / montoTotalPrecioSugerido - 1;
+    console.log('variacionDescuento', variacionDescuento);
+    const variacionDescuentoSugerido =
+      1 - montoTotalPrecioTransfer / montoTotalPrecioSugerido;
+    console.log('variacionDescuentoSugerido', variacionDescuentoSugerido);
     return {
       montoTotalHospitalPmp,
       montoTotalPrecioSugerido,
-      variacionDescuento: montoTotalHospitalPmp / montoTotalPrecioSugerido - 1,
-      variacionDescuentoSugerido:
-        1 - montoTotalPrecioTransfer / montoTotalPrecioSugerido,
+      variacionDescuento,
+      variacionDescuentoSugerido,
       montoTotalNotaDeCredito:
         montoTotalHospitalPmp * (this.simulatorDiscountValue() / 100),
       montoTotalPrecioTransfer,
       cobertura: !!this.simulatorObjectiveValue()
         ? (montoTotalHospitalPmp * 100) / this.simulatorObjectiveValue()
         : 100,
-      objetivoTrimestral: this.simulatorObjectiveValue(),
+      objetivoTrimestral,
     } as ProductsQuotation;
   });
 
@@ -96,17 +106,21 @@ export class SimulatorService {
       (acc, product) => acc + product.pmpTotalAmount,
       0
     );
+    console.log('montoTotalHospitalPmp', montoTotalHospitalPmp);
     const montoTotalPrecioSugerido = this.simulatorItemValues2().reduce(
       (acc, product) => acc + product.suggestedPriceTotalAmount,
       0
     );
-
+    console.log('montoTotalPrecioSugerido', montoTotalPrecioSugerido);
     const montoTotalNotaDeCredito = 0;
-
+    console.log('montoTotalNotaDeCredito', montoTotalNotaDeCredito);
     const montoTotalPrecioTransfer = this.simulatorItemValues2().reduce(
       (acc, product) => acc + (product.transferPriceTotalAmount || 0),
       0
     );
+    console.log('montoTotalPrecioTransfer', montoTotalPrecioTransfer);
+    const objetivoTrimestral = this.simulatorObjectiveValue();
+    console.log('objetivoTrimestral', objetivoTrimestral);
     return {
       montoTotalHospitalPmp,
       montoTotalPrecioSugerido,
@@ -118,7 +132,7 @@ export class SimulatorService {
       cobertura: !!this.simulatorObjectiveValue()
         ? (montoTotalHospitalPmp * 100) / this.simulatorObjectiveValue()
         : 100,
-      objetivoTrimestral: this.simulatorObjectiveValue(),
+      objetivoTrimestral,
     } as ProductsQuotation;
   });
 
@@ -148,7 +162,7 @@ export class SimulatorService {
       this.logoUrl = './assets/images/slide2/B01_LogoTitulo.png';
       if (url.includes('simulator')) {
         this.inventariosCaducidadesUrl =
-          'https://www.google.com/url?q=https://app.powerbi.com/groups/me/reports/83b3455d-acc1-4eaf-8660-6fdf027ae4aa/ReportSectionf86d32d8d0dc1c674701?experience%3Dpower-bi&sa=D&source=editors&ust=1720212778800411&usg=AOvVaw2W4FoCnuDepv7LXpa18NEk';
+          'https://www.google.com/url?q=https://app.powerbi.com/singleSignOn?experience%3Dpower-bi%26ru%3Dhttps%253A%252F%252Fapp.powerbi.com%252Fgroups%252Fme%252Freports%252F83b3455d-acc1-4eaf-8660-6fdf027ae4aa%252FReportSectionf86d32d8d0dc1c674701%253Fexperience%253Dpower-bi%2526noSignUpCheck%253D1&sa=D&source=editors&ust=1721341001893530&usg=AOvVaw03pMrHakhKtuekvSOgvhXo';
         this.enableInventarioYCaducidades = true;
       } else if (url.includes('transfers')) {
         this.inventariosCaducidadesUrl =

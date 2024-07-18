@@ -2,6 +2,14 @@
   font-size: 14px;
 }
 
+.fs-alt {
+  font-size: 12px;
+}
+
+.w-40 {
+  width: 40%;
+}
+
 .customText1 {
   color: #00635c;
 }
