@@ -9,8 +9,6 @@ import {
 import * as productsJson from '../data/products.json';
 import * as offersJson from '../data/offers.json';
 import { Location } from '@angular/common';
-import { logo } from '../../../../../novo-calculator/src/app/shared/services/svgs/logo.svg';
-
 @Injectable({
   providedIn: 'root',
 })
