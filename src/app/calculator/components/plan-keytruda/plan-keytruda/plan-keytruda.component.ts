@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
+import { KeytrudaService } from '../../../services/keytruda.service';
+import { TKeytrudaCalculatorData } from '../../../types/keytrudaCalculatorData.type';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-plan-keytruda',
@@ -7,11 +10,15 @@ import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-feat
   styleUrl: './plan-keytruda.component.css'
 })
 export class PlanKeytrudaComponent implements OnInit {
+  keytrudaCalculatorData$!: Observable<TKeytrudaCalculatorData>;
+  buttonTitles!: string[]
+  constructor(private _bef: NgxBootstrapExpandedFeaturesService, private _keytrudaService: KeytrudaService) {
 
-  constructor(private _bef: NgxBootstrapExpandedFeaturesService) {}
+  }
 
   ngOnInit(): void {
     this.cssCreate();
+    this.keytrudaCalculatorData$ = this._keytrudaService.keytrudaCalculatorData$;
   }
 
   cssCreate(){

@@ -171,6 +171,9 @@
       </defs>
     </svg>
   </div>
+  <div  *ngIf="keytrudaCalculatorData$ | async as keytrudaData">
+    <button>{{keytrudaData.page}}</button>
+  </div>
   <div>
 
   </div>
