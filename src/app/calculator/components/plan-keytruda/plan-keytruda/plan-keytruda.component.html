@@ -1,5 +1,7 @@
-<section>
-  <div>
+<div
+  class="bef bef-w-90vw bef-h-100vh bef-p-1rem bef-d-flex bef-flexDirection-column bef-gap-3rem"
+>
+  <section>
     <svg
       width="451"
       height="67"
@@ -73,8 +75,10 @@
         fill="#3E444C"
       />
     </svg>
-  </div>
-  <div>
+  </section>
+  <section
+    class="bef bef-d-flex bef-flexDirection-row bef-alignItems-center bef-justifyContent-end"
+  >
     <svg
       width="224"
       height="51"
@@ -170,22 +174,286 @@
         </linearGradient>
       </defs>
     </svg>
-  </div>
-  <div  *ngIf="keytrudaCalculatorData$ | async as keytrudaData">
-    <button>{{keytrudaData.page}}</button>
-  </div>
-  <div>
+    <div class="bef bef-d-flex bef-flexDirection-column">
+     <button
+     class="bef bef-bg-HASHeef6f5 bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
+     (click)="showOptions()"
+     >{{this.title}}</button>
+      <div
+        [ngStyle]="this.show ? { display: 'flex', flexDirection: 'column' } : { display: 'none' }"
+      >
+      @for(option of options; track options){
+        <button
+        class="bef bef-bg-HASHeef6f5 bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
+        (click)="select(option.title)">{{option.title}}</button>
+      }
+    </div>
 
-  </div>
-  <div>
+    </div>
+  </section>
 
-  </div>
-  <div>
-
-  </div>
-  <div>
-    <button class="bef bef-bg-transparent bef-bw-0">
-      <img src="../../../../../assets/images/bt-home.png" alt="" />
-    </button>
-  </div>
-</section>
+  <section>
+    <div
+      class="bef bef-d-flex flexDir-row bef-justifyContent-start bef-gap-3rem"
+    >
+      <div>
+        <p>UNIDADES POR PRODUCTO</p>
+        <span>KEYTRUDA</span>
+      </div>
+      <div>
+        <p class="bef bef-color-HASH00827a">PMP</p>
+        <p class="bef bef-r-0_5rem">
+          {{ (keytrudaCalculatorData$ | async)?.pmp }}
+        </p>
+      </div>
+      <div>
+        <p class="bef bef-color-HASH00827a">Oferta comercial MSD (4%)</p>
+        <p class="bef bef-r-0_5rem">
+          {{ (keytrudaCalculatorData$ | async)?.comertialOfferDiscount }}
+        </p>
+      </div>
+      <div>
+        <p class="bef bef-color-HASH00827a">Precio con oferta inicial</p>
+        <p class="bef bef-r-0_5rem">
+          {{ (keytrudaCalculatorData$ | async)?.priceWithInitialOffer }}
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div *ngIf="keytrudaCalculatorData$ | async as keytrudaData">
+      <h5>PLAN COMERCIAL</h5>
+      <div class="bef bef-d-flex bef-flexDirection-row bef-gap-3rem">
+        <div>
+          <p class="bef bef-color-HASH00827a">UNIDADES</p>
+          <p class="bef bef-w-100per bef-r-0_5rem bef-bg-HASHE2E3E4">
+            {{ keytrudaData.units }}
+          </p>
+        </div>
+        <div>
+          <span class="bef bef-color-HASH00827a">ESCALÓN 1 (2%)</span>
+          <span
+            ><p>{{ keytrudaData.stepOne }}</p></span
+          >
+        </div>
+        <div>
+          <span class="bef bef-color-HASH00827a">ESCALÓN 2 (2%)</span>
+          <span
+            ><p>{{ keytrudaData.stepTwo }}</p></span
+          >
+        </div>
+        <div>
+          <span class="bef bef-color-HASH00827a">BENEFICIO POR ESCALÓN 1</span>
+          <span
+            ><p>{{ keytrudaData.benefitPerStepOne }}</p></span
+          >
+        </div>
+        <div>
+          <span class="bef bef-color-HASH00827a">BENEFICIO POR ESCALÓN 2</span>
+          <span
+            ><p>{{ keytrudaData.benefitPerStepTwo }}</p></span
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bef">
+    <div class="bef bef-d-flex bef-flexDirection-row">
+      <div class="bef bef-d-flex bef-p-0_5rem bef-ret-1rem bef-bg-HASH00827a">
+        <div
+          class="bef bef-d-flex bef-flexDirection-column bef-justifyContent-end bef-alignItems-end"
+        >
+          <p>OFERTA COMERCIAL</p>
+          <p>PLAN COMERCIAL</p>
+          <p>PRECIO SUGERIDO CON PLAN COMERCIAL</p>
+          <p>RENTABILIDAD POR PIEZA</p>
+          <p>RENTABILIDAD POR CICLO</p>
+          <p>BENEFICIO A 14 CICLOS</p>
+        </div>
+        <div class="bef bef-w-10rem">
+          <p
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+          >
+            {{ (keytrudaCalculatorData$ | async)?.comertialOfferPercentage }}
+          </p>
+          <p
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+          >
+            {{ (keytrudaCalculatorData$ | async)?.comertialPlan }}
+          </p>
+          <p
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+          >
+            {{
+              (keytrudaCalculatorData$ | async)?.sugestedPriceWithComertialPlan
+            }}
+          </p>
+          <p
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+          >
+            {{ (keytrudaCalculatorData$ | async)?.rentabilityPerPiece }}
+          </p>
+          <p
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+          >
+            {{ (keytrudaCalculatorData$ | async)?.rentabilityPerCycle }}
+          </p>
+          <p
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+          >
+            {{ (keytrudaCalculatorData$ | async)?.benefitOnfourteenCycles }}
+          </p>
+        </div>
+      </div>
+      <div class="bef bef-d-flex bef-flexDirection-column">
+        <button class="bef bef-bg-transparent bef-bw-0">
+          <svg
+            width="224"
+            height="51"
+            viewBox="0 0 224 51"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_d_0_1)">
+              <path
+                d="M16.2499 2.92993H203.61C211.11 2.92993 217.2 9.01996 217.2 16.52V31.2899C217.2 38.7899 211.11 44.8799 203.61 44.8799H16.2499C8.74994 44.8799 2.65991 38.7899 2.65991 31.2899V16.52C2.65991 9.01996 8.74994 2.92993 16.2499 2.92993Z"
+                fill="url(#paint0_linear_0_1)"
+              />
+            </g>
+            <path
+              d="M26.3 20.96H27.99L31.55 29.33H29.64L28.88 27.4699H25.37L24.61 29.33H22.75L26.31 20.96H26.3ZM28.22 25.8499L27.12 23.1599L26.02 25.8499H28.23H28.22Z"
+              fill="white"
+            />
+            <path
+              d="M32.8301 21.02H34.5201L38.41 26.14V21.02H40.2101V29.33H38.6501L34.6301 24.05V29.33H32.8301V21.02Z"
+              fill="white"
+            />
+            <path
+              d="M45.07 20.96H46.76L50.32 29.33H48.41L47.65 27.47H44.14L43.38 29.33H41.52L45.08 20.96H45.07ZM46.99 25.85L45.89 23.16L44.79 25.85H47H46.99ZM46.61 18.38L48.16 19.06L46.55 20.25H45.17L46.61 18.39V18.38Z"
+              fill="white"
+            />
+            <path
+              d="M51.6 21.02H53.43V27.67H57.57V29.33H51.6V21.02Z"
+              fill="white"
+            />
+            <path d="M59.04 21.02H60.8701V29.33H59.04V21.02Z" fill="white" />
+            <path
+              d="M62.37 28.1099L63.45 26.8199C64.21 27.4399 64.98 27.83 65.93 27.83C66.69 27.83 67.13 27.5299 67.13 27.0499V27.03C67.13 26.57 66.84 26.3199 65.46 25.9699C63.77 25.5499 62.71 25.0699 62.71 23.4299V23.4099C62.71 21.8999 63.91 20.9099 65.62 20.9099C66.84 20.9099 67.85 21.2899 68.71 21.9699L67.76 23.3499C67.01 22.8399 66.31 22.53 65.6 22.53C64.89 22.53 64.53 22.8399 64.53 23.2499V23.27C64.53 23.83 64.89 23.9799 66.32 24.3599C68.01 24.8099 68.96 25.3999 68.96 26.8499V26.8699C68.96 28.5199 67.7 29.45 65.91 29.45C64.64 29.45 63.38 29.0199 62.38 28.1199L62.37 28.1099Z"
+              fill="white"
+            />
+            <path d="M70.63 21.02H72.46V29.33H70.63V21.02Z" fill="white" />
+            <path
+              d="M73.96 28.1099L75.0399 26.8199C75.7999 27.4399 76.57 27.83 77.52 27.83C78.28 27.83 78.7199 27.5299 78.7199 27.0499V27.03C78.7199 26.57 78.4299 26.3199 77.0499 25.9699C75.3599 25.5499 74.2999 25.0699 74.2999 23.4299V23.4099C74.2999 21.8999 75.5 20.9099 77.21 20.9099C78.43 20.9099 79.4399 21.2899 80.2999 21.9699L79.3499 23.3499C78.5999 22.8399 77.8999 22.53 77.1899 22.53C76.4799 22.53 76.1199 22.8399 76.1199 23.2499V23.27C76.1199 23.83 76.4799 23.9799 77.9099 24.3599C79.5999 24.8099 80.5499 25.3999 80.5499 26.8499V26.8699C80.5499 28.5199 79.2899 29.45 77.4999 29.45C76.2299 29.45 74.9699 29.0199 73.9699 28.1199L73.96 28.1099Z"
+              fill="white"
+            />
+            <path
+              d="M85.7 21.02H88.9399C91.5499 21.02 93.3599 22.81 93.3599 25.15V25.17C93.3599 27.51 91.5599 29.33 88.9399 29.33H85.7V21.02ZM87.53 22.67V27.68H88.9399C90.4199 27.68 91.4399 26.67 91.4399 25.2V25.18C91.4399 23.71 90.4199 22.68 88.9399 22.68H87.53V22.67Z"
+              fill="white"
+            />
+            <path
+              d="M94.99 21.02H101.26V22.65H96.81V24.34H100.73V25.97H96.81V27.72H101.32V29.35H94.99V21.04V21.02Z"
+              fill="white"
+            />
+            <path
+              d="M106.14 25.19V25.17C106.14 22.81 107.92 20.87 110.47 20.87C112.03 20.87 112.99 21.39 113.75 22.15L112.59 23.49C111.94 22.91 111.31 22.55 110.47 22.55C109.07 22.55 108.06 23.71 108.06 25.14V25.16C108.06 26.58 109.05 27.77 110.47 27.77C111.42 27.77 112 27.4 112.65 26.8L113.81 27.98C112.96 28.89 112.02 29.46 110.4 29.46C107.95 29.46 106.14 27.57 106.14 25.19Z"
+              fill="white"
+            />
+            <path
+              d="M114.67 25.19V25.17C114.67 22.81 116.53 20.87 119.1 20.87C121.67 20.87 123.5 22.78 123.5 25.14V25.16C123.5 27.52 121.64 29.46 119.07 29.46C116.5 29.46 114.67 27.55 114.67 25.19ZM121.59 25.19V25.17C121.59 23.75 120.55 22.56 119.07 22.56C117.59 22.56 116.58 23.72 116.58 25.15V25.17C116.58 26.59 117.62 27.78 119.1 27.78C120.58 27.78 121.59 26.62 121.59 25.19Z"
+              fill="white"
+            />
+            <path
+              d="M125.13 21.02H127.1L129.28 24.53L131.46 21.02H133.43V29.33H131.61V23.9L129.27 27.45H129.22L126.91 23.94V29.33H125.12V21.02H125.13Z"
+              fill="white"
+            />
+            <path
+              d="M135.44 21.02H138.84C140.82 21.02 142.02 22.18 142.02 23.89V23.91C142.02 25.85 140.52 26.83 138.66 26.83H137.27V29.32H135.44V21.01V21.02ZM138.72 25.21C139.63 25.21 140.17 24.66 140.17 23.95V23.93C140.17 23.11 139.6 22.67 138.69 22.67H137.28V25.21H138.73H138.72Z"
+              fill="white"
+            />
+            <path
+              d="M143.37 21.02H149.64V22.65H145.19V24.34H149.11V25.97H145.19V27.72H149.7V29.35H143.37V21.04V21.02Z"
+              fill="white"
+            />
+            <path
+              d="M153.27 22.7H150.74V21.01H157.63V22.7H155.1V29.32H153.27V22.7Z"
+              fill="white"
+            />
+            <path
+              d="M159.03 21.02H165.3V22.65H160.85V24.34H164.77V25.97H160.85V27.72H165.36V29.35H159.03V21.04V21.02Z"
+              fill="white"
+            />
+            <path
+              d="M166.99 21.02H168.68L172.57 26.14V21.02H174.37V29.33H172.82L168.8 24.05V29.33H167V21.02H166.99Z"
+              fill="white"
+            />
+            <path
+              d="M176 25.19V25.17C176 22.81 177.78 20.87 180.33 20.87C181.89 20.87 182.85 21.39 183.61 22.15L182.45 23.49C181.8 22.91 181.17 22.55 180.33 22.55C178.93 22.55 177.92 23.71 177.92 25.14V25.16C177.92 26.58 178.91 27.77 180.33 27.77C181.28 27.77 181.86 27.4 182.51 26.8L183.67 27.98C182.82 28.89 181.88 29.46 180.26 29.46C177.81 29.46 176 27.57 176 25.19Z"
+              fill="white"
+            />
+            <path d="M185.22 21.02H187.05V29.33H185.22V21.02Z" fill="white" />
+            <path
+              d="M191.97 20.96H193.66L197.22 29.33H195.31L194.55 27.4699H191.04L190.28 29.33H188.42L191.98 20.96H191.97ZM193.9 25.8499L192.8 23.1599L191.7 25.8499H193.91H193.9Z"
+              fill="white"
+            />
+            <defs>
+              <filter
+                id="filter0_d_0_1"
+                x="0.659912"
+                y="0.929932"
+                width="222.54"
+                height="49.95"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="2" dy="2" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_0_1"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_0_1"
+                  result="shape"
+                />
+              </filter>
+              <linearGradient
+                id="paint0_linear_0_1"
+                x1="2.65991"
+                y1="23.8999"
+                x2="217.2"
+                y2="23.8999"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#56A39F" />
+                <stop offset="0.22" stop-color="#489994" />
+                <stop offset="0.62" stop-color="#267F79" />
+                <stop offset="1" stop-color="#00635C" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </button>
+        <button class="bef bef-bg-transparent bef-bw-0 bef-w-auto">
+          <img
+            class="bef bef-w-16rem"
+            src="../../../../../assets/images/bt-home.png"
+            alt=""
+          />
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,7 +1,7 @@
 import { TKeytrudaCalculatorData } from "../types/keytrudaCalculatorData.type"
 
 export const keytrudaCalculatorData: TKeytrudaCalculatorData = {
-  page:  'HOSPITALES',
+  page:  '',
   unitsPerProduct: '',
   pmp: 0,
   comertialOfferDiscount: 0,
