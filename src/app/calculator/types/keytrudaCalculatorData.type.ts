@@ -1,5 +1,5 @@
 export type TKeytrudaCalculatorData = {
-  page: 'HOSPITALES' | 'CENTROS ONCOLÓGICOS TOP PREMIUM' | 'CENTROS ONCOLÓGICOS TIER 1' | 'CENTROS ONCOLÓGICOS TIER 2' | 'CENTROS ONCOLÓGICOS TIER 3' | '';
+  page: 'HOSPITALES' | 'CENTROS ONCOLÓGICOS TOP PREMIUM' | 'CENTROS ONCOLÓGICOS TIER 1' | 'CENTROS ONCOLÓGICOS TIER 2' | 'CENTROS ONCOLÓGICOS TIER 3' | string;
   unitsPerProduct: string;
   pmp: number;
   comertialOfferDiscount: number;

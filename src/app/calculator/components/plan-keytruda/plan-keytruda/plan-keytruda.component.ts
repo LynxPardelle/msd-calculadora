@@ -44,6 +44,7 @@ export class PlanKeytrudaComponent implements OnInit {
   select(title: string){
     this.title = title;
     this.show = false;
+    this._keytrudaService.selectionClick(title);
   }
 
 
