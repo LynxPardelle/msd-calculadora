@@ -10,7 +10,12 @@ segmento: [
     comertialPlanFinalPrice: function() {return this.pmp * 0.92},
     rentabilityPerPiece: function() {return this.pmp * 0.08},
     rentabilityPerCycle: function() {return this.rentabilityPerPiece() * 2},
-    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 15}
+    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 15},
+    units: 80,
+    stepOne: 80,
+    stepTwo: 85,
+    benefitPerStepOne: function() {return this.stepOne * 0.02 * this.pmp},
+    benefitPerStepTwo: function() {return this.stepTwo * 0.04 * this.pmp},
   },
   {
     title: 'CENTROS ONCOLÓGICOS TOP PREMIUM',
@@ -22,7 +27,12 @@ segmento: [
     comertialPlanFinalPrice: function() {return this.pmp * 0.84},
     rentabilityPerPiece: function() {return this.pmp * 0.16},
     rentabilityPerCycle: function() {return this.rentabilityPerPiece() * 2},
-    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14}
+    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14},
+    units: 80,
+    stepOne: 80,
+    stepTwo: 90,
+    benefitPerStepOne: function() {return this.stepOne * 0.03 * this.pmp},
+    benefitPerStepTwo: function() {return this.stepTwo * 0.06 * this.pmp},
   },
   {
     title: 'CENTROS ONCOLÓGICOS TIER 1',
@@ -34,7 +44,12 @@ segmento: [
     comertialPlanFinalPrice: function() {return this.pmp * 0.86},
     rentabilityPerPiece: function() {return this.pmp * 0.14},
     rentabilityPerCycle: function() {return this.rentabilityPerPiece() * 2},
-    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14}
+    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14},
+    units: 80,
+    stepOne: 80,
+    stepTwo: 85,
+    benefitPerStepOne: function() {return this.stepOne * 0.02 * this.pmp},
+    benefitPerStepTwo: function() {return this.stepTwo * 0.04 * this.pmp},
   },
   {
     title: 'CENTROS ONCOLÓGICOS TIER 2',
@@ -46,7 +61,12 @@ segmento: [
     comertialPlanFinalPrice: function() {return this.pmp * 0.88},
     rentabilityPerPiece: function() {return this.pmp * 0.12},
     rentabilityPerCycle: function() {return this.rentabilityPerPiece() * 2},
-    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14}
+    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14},
+    units: 80,
+    stepOne: 80,
+    stepTwo: 85,
+    benefitPerStepOne: function() {return this.stepOne * 0.02 * this.pmp},
+    benefitPerStepTwo: function() {return this.stepTwo * 0.04 * this.pmp},
   },
   {
     title: 'CENTROS ONCOLÓGICOS TIER 3',
@@ -58,7 +78,12 @@ segmento: [
     comertialPlanFinalPrice: function() {return this.pmp * 0.90},
     rentabilityPerPiece: function() {return this.pmp * 0.10},
     rentabilityPerCycle: function() {return this.rentabilityPerPiece() * 2},
-    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14}
+    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14},
+    units: 80,
+    stepOne: 80,
+    stepTwo: 85,
+    benefitPerStepOne: function() {return this.stepOne * 0.01 * this.pmp},
+    benefitPerStepTwo: function() {return this.stepTwo * 0.02 * this.pmp},
   }
 ]
 };
