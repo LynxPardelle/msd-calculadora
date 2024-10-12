@@ -1,5 +1,5 @@
 <div
-  class="bef bef-w-90vw bef-h-100vh bef-p-1rem bef-d-flex bef-flexDirection-column bef-gap-3rem"
+  class="bef bef-w-100vw bef-h-100vh bef-p-1rem bef-ps-0 bef-pb-0 bef-d-flex bef-flexDirection-column bef-justifyContent-spaceMINbetween bef-gap-3rem"
 >
   <section>
     <svg
@@ -175,20 +175,28 @@
       </defs>
     </svg>
     <div class="bef bef-d-flex bef-flexDirection-column">
-     <button
-     class="bef bef-bg-HASHeef6f5 bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
-     (click)="showOptions()"
-     >{{this.title}}</button>
-      <div
-        [ngStyle]="this.show ? { display: 'flex', flexDirection: 'column' } : { display: 'none' }"
-      >
-      @for(option of options; track options){
-        <button
+      <button
         class="bef bef-bg-HASHeef6f5 bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
-        (click)="select(option.title)">{{option.title}}</button>
-      }
-    </div>
-
+        (click)="showOptions()"
+      >
+        {{ this.title }}
+      </button>
+      <div
+        [ngStyle]="
+          this.show
+            ? { display: 'flex', flexDirection: 'column' }
+            : { display: 'none' }
+        "
+      >
+        @for(option of options; track options){
+        <button
+          class="bef bef-bg-HASHeef6f5 bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
+          (click)="select(option.title)"
+        >
+          {{ option.title }}
+        </button>
+        }
+      </div>
     </div>
   </section>
 
@@ -203,63 +211,70 @@
       <div>
         <p class="bef bef-color-HASH00827a">PMP</p>
         <p class="bef bef-r-0_5rem">
-          {{ (keytrudaCalculatorData$ | async)?.pmp }}
+          {{ (keytrudaCalculatorData$ | async)?.pmp | number : "1.2-2" }}
         </p>
       </div>
       <div>
-        <p class="bef bef-color-HASH00827a">Oferta comercial MSD ({{(keytrudaCalculatorData$ | async)?.comertialOfferPercentage}}%)</p>
+        <p class="bef bef-color-HASH00827a">
+          Oferta <br> comercial MSD ({{
+            (keytrudaCalculatorData$ | async)?.comertialOfferPercentage
+          }}%)
+        </p>
         <p class="bef bef-r-0_5rem">
-          {{ (keytrudaCalculatorData$ | async)?.comertialOfferDiscount }}
+          {{
+            (keytrudaCalculatorData$ | async)?.comertialOfferDiscount
+              | number : "1.2-2"
+          }}
         </p>
       </div>
       <div>
-        <p class="bef bef-color-HASH00827a">Precio con oferta inicial</p>
+        <p class="bef bef-color-HASH00827a">Precio con <br> oferta inicial</p>
         <p class="bef bef-r-0_5rem">
-          {{ (keytrudaCalculatorData$ | async)?.priceWithInitialOffer }}
+          {{
+            (keytrudaCalculatorData$ | async)?.priceWithInitialOffer
+              | number : "1.2-2"
+          }}
         </p>
       </div>
     </div>
   </section>
-  <section>
+  <section >
     <div *ngIf="keytrudaCalculatorData$ | async as keytrudaData">
       <h5>PLAN COMERCIAL</h5>
       <div class="bef bef-d-flex bef-flexDirection-row bef-gap-3rem">
         <div>
           <p class="bef bef-color-HASH00827a">UNIDADES</p>
-          <p class="bef bef-w-100per bef-r-0_5rem bef-bg-HASHE2E3E4">
+          <p  class="bef bef-bg-HASHe2e3e4 bef-d-flex bef-justifyContent-center bef-w-100per bef-r-0_5rem ">
             {{ keytrudaData.units }}
           </p>
         </div>
         <div>
-          <span class="bef bef-color-HASH00827a">ESCALÓN 1 (2%)</span>
-          <span
-            ><p>{{ keytrudaData.stepOne }}</p></span
-          >
+          <p class="bef bef-color-HASH00827a">ESCALÓN 1 (2%)</p>
+          <p class="bef bef-d-flex bef-justifyContent-center bef-w-100per bef-r-0_5rem bef-bg-HASHE2E3E4">{{ keytrudaData.stepOne }}</p>
         </div>
         <div>
-          <span class="bef bef-color-HASH00827a">ESCALÓN 2 (2%)</span>
-          <span
-            ><p>{{ keytrudaData.stepTwo }}</p></span
-          >
+          <p class="bef bef-color-HASH00827a">ESCALÓN 2 (2%)</p>
+          <p class="bef bef-d-flex bef-justifyContent-center bef-w-100per bef-r-0_5rem bef-bg-HASHE2E3E4">{{ keytrudaData.stepTwo }}</p>
         </div>
         <div>
-          <span class="bef bef-color-HASH00827a">BENEFICIO POR ESCALÓN 1</span>
-          <span
-            ><p>{{ keytrudaData.benefitPerStepOne }}</p></span
-          >
+          <p class="bef bef-color-HASH00827a">BENEFICIO<br> POR ESCALÓN 1</p>
+          <p class="bef bef-d-flex bef-justifyContent-center bef-w-100per bef-r-0_5rem bef-bg-HASHE2E3E4">
+              {{ keytrudaData.benefitPerStepOne | number : "1.2-2" }}
+            </p>
         </div>
         <div>
-          <span class="bef bef-color-HASH00827a">BENEFICIO POR ESCALÓN 2</span>
-          <span
-            ><p>{{ keytrudaData.benefitPerStepTwo }}</p></span
-          >
+          <p class="bef bef-color-HASH00827a">BENEFICIO <br> POR ESCALÓN 2</p>
+          <p class="bef bef-d-flex bef-justifyContent-center bef-w-100per bef-r-0_5rem bef-bg-HASHE2E3E4">
+              {{ keytrudaData.benefitPerStepTwo | number : "1.2-2" }}
+            </p>
+
         </div>
       </div>
     </div>
   </section>
   <section class="bef">
     <div class="bef bef-d-flex bef-flexDirection-row">
-      <div class="bef bef-d-flex bef-p-0_5rem bef-ret-1rem bef-bg-HASH00827a">
+      <div class="bef bef-w-45per bef-d-flex bef-p-2rem bef-pt-4rem bef-ret-5rem bef-bg-HASH00827a">
         <div
           class="bef bef-d-flex bef-flexDirection-column bef-justifyContent-end bef-alignItems-end"
         >
@@ -270,38 +285,48 @@
           <p>RENTABILIDAD POR CICLO</p>
           <p>BENEFICIO A 14 CICLOS</p>
         </div>
-        <div class="bef bef-w-10rem">
+        <div class="bef bef-w-10rem bef-ms-0_5rem">
           <p
-            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{ (keytrudaCalculatorData$ | async)?.comertialOfferPercentage }}
+            {{ (keytrudaCalculatorData$ | async)?.comertialOfferPercentage }}%
           </p>
           <p
-            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{ (keytrudaCalculatorData$ | async)?.comertialPlan }}
+            {{ (keytrudaCalculatorData$ | async)?.comertialPlan }}%
           </p>
           <p
-            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
             {{
               (keytrudaCalculatorData$ | async)?.sugestedPriceWithComertialPlan
+                | number : "1.2-2"
             }}
           </p>
           <p
-            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{ (keytrudaCalculatorData$ | async)?.rentabilityPerPiece }}
+            {{
+              (keytrudaCalculatorData$ | async)?.rentabilityPerPiece
+                | number : "1.2-2"
+            }}
           </p>
           <p
-            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{ (keytrudaCalculatorData$ | async)?.rentabilityPerCycle }}
+            {{
+              (keytrudaCalculatorData$ | async)?.rentabilityPerCycle
+                | number : "1.2-2"
+            }}
           </p>
           <p
-            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_7rem"
+            class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{ (keytrudaCalculatorData$ | async)?.benefitOnfourteenCycles }}
+            {{
+              (keytrudaCalculatorData$ | async)?.benefitOnfourteenCycles
+                | number : "1.2-2"
+            }}
           </p>
         </div>
       </div>

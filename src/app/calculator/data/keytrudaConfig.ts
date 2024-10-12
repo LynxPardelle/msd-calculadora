@@ -10,7 +10,7 @@ segmento: [
     comertialPlanFinalPrice: function() {return this.pmp * 0.92},
     rentabilityPerPiece: function() {return this.pmp * 0.08},
     rentabilityPerCycle: function() {return this.rentabilityPerPiece() * 2},
-    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 15},
+    fourteenCyclesBenefit: function() {return this.rentabilityPerCycle() * 14},
     units: 80,
     stepOne: 80,
     stepTwo: 85,
