@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChange } from '@angular/core';
 import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
 import { KeytrudaService } from '../../../services/keytruda.service';
 import { TKeytrudaCalculatorData } from '../../../types/keytrudaCalculatorData.type';
@@ -13,6 +13,8 @@ import { Observable } from 'rxjs';
 export class PlanKeytrudaComponent implements OnInit {
   keytrudaCalculatorData$!: Observable<TKeytrudaCalculatorData>;
   @Input() title!: string | undefined;
+  showFaqModal: boolean = false;
+
   show: boolean = false;
   options: { title: string, selected: boolean}[] = [
     {title: 'HOSPITALES', selected: true},
@@ -26,6 +28,8 @@ export class PlanKeytrudaComponent implements OnInit {
     private _bef: NgxBootstrapExpandedFeaturesService,
     private _keytrudaService: KeytrudaService
   ) {}
+
+
 
   ngOnInit(): void {
     this.cssCreate();
@@ -46,6 +50,10 @@ export class PlanKeytrudaComponent implements OnInit {
     this.title = title;
     this.show = false;
     this._keytrudaService.selectionClick(title);
+  }
+
+  openFaqModal() {
+
   }
 
 
