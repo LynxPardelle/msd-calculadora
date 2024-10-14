@@ -18,7 +18,7 @@ segmento: [
     benefitPerStepTwo: function() {return this.stepTwo * 0.04 * this.pmp},
   },
   {
-    title: 'CENTROS ONCOLÓGICOS TOP PREMIUM',
+    title: `CENTROS ONCOLÓGICOS TOP PREMIUM`,
     pmp: 99234.43,
     comertialOffer: function(){return this.pmp * .10},
     initialOfferPrice: function(){return this.pmp * 0.90},

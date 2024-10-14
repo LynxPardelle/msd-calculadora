@@ -77,7 +77,7 @@
     </svg>
   </section>
   <section
-    class="bef bef-d-flex bef-flexDirection-row bef-alignItems-center bef-justifyContent-end"
+    class="bef bef-d-flex bef-flexDirection-row bef-h-14rem  bef-justifyContent-end"
   >
     <svg
       width="224"
@@ -174,14 +174,20 @@
         </linearGradient>
       </defs>
     </svg>
-    <div class="bef bef-d-flex bef-flexDirection-column">
+    <div class="bef bef-my-0_2rem">
       <button
-        class="bef bef-bg-HASHeef6f5 bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
+        class="bef bef-d-flex bef-flexDirection-row bef-justifyContent-center bef-alignItems-center bef-gap-1rem bef-bg-HASHeef6f5 bef-w-16rem bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
         (click)="showOptions()"
       >
-        {{ this.title }}
+        <p class="bef bef-m-0 bef-fontSize-12px">{{ this.title }}</p><svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.84003 1.69995H21.16" stroke="#00635C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1.84003 6.63H21.16" stroke="#00635C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1.84003 11.5599H21.16" stroke="#00635C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
       </button>
       <div
+      class="bef bef-gap-0_2rem"
         [ngStyle]="
           this.show
             ? { display: 'flex', flexDirection: 'column' }
@@ -189,12 +195,14 @@
         "
       >
         @for(option of options; track options){
-        <button
-          class="bef bef-bg-HASHeef6f5 bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
-          (click)="select(option.title)"
-        >
-          {{ option.title }}
-        </button>
+
+          <button
+            class="bef bef-bg-HASHeef6f5 bef-w-16rem bef-bc-HASHeef6f5 bef-color-HASH00827a bef-p-0_5rem bef-r-1rem"
+            (click)="select(option.title)"
+          >
+            <p class="bef bef-m-0 bef-fontSize-12px">{{ option.title }}</p>
+          </button>
+
         }
       </div>
     </div>
@@ -202,26 +210,26 @@
 
   <section>
     <div
-      class="bef bef-d-flex flexDir-row bef-justifyContent-start bef-gap-3rem"
+      class="bef bef-d-flex flexDir-row bef-justifyContent-start bef-alignItems-end bef-gap-3rem bef-ps-5rem"
     >
-      <div>
+      <div class="bef bef-d-flex bef-flexDirection-column bef-alignItems-center">
         <p>UNIDADES POR PRODUCTO</p>
-        <span>KEYTRUDA</span>
+        <span class="bef bef-mb-1rem">KEYTRUDA</span>
       </div>
-      <div>
+      <div class="bef bef-d-flex bef-flexDirection-column bef-alignItems-center">
         <p class="bef bef-color-HASH00827a">PMP</p>
         <p class="bef bef-r-0_5rem">
-          {{ (keytrudaCalculatorData$ | async)?.pmp | number : "1.2-2" }}
+          $ {{ (keytrudaCalculatorData$ | async)?.pmp | number : "1.2-2" }}
         </p>
       </div>
-      <div>
+      <div class="bef bef-d-flex bef-flexDirection-column bef-alignItems-center">
         <p class="bef bef-color-HASH00827a">
           Oferta <br> comercial MSD ({{
             (keytrudaCalculatorData$ | async)?.comertialOfferPercentage
           }}%)
         </p>
         <p class="bef bef-r-0_5rem">
-          {{
+          $ {{
             (keytrudaCalculatorData$ | async)?.comertialOfferDiscount
               | number : "1.2-2"
           }}
@@ -230,7 +238,7 @@
       <div>
         <p class="bef bef-color-HASH00827a">Precio con <br> oferta inicial</p>
         <p class="bef bef-r-0_5rem">
-          {{
+          $ {{
             (keytrudaCalculatorData$ | async)?.priceWithInitialOffer
               | number : "1.2-2"
           }}
@@ -239,7 +247,7 @@
     </div>
   </section>
   <section >
-    <div *ngIf="keytrudaCalculatorData$ | async as keytrudaData">
+    <div class="bef bef-ps-5rem" *ngIf="keytrudaCalculatorData$ | async as keytrudaData">
       <h5>PLAN COMERCIAL</h5>
       <div class="bef bef-d-flex bef-flexDirection-row bef-gap-3rem">
         <div>
@@ -259,13 +267,13 @@
         <div>
           <p class="bef bef-color-HASH00827a">BENEFICIO<br> POR ESCALÓN 1</p>
           <p class="bef bef-d-flex bef-justifyContent-center bef-w-100per bef-r-0_5rem bef-bg-HASHE2E3E4">
-              {{ keytrudaData.benefitPerStepOne | number : "1.2-2" }}
+              $ {{ keytrudaData.benefitPerStepOne | number : "1.2-2" }}
             </p>
         </div>
         <div>
           <p class="bef bef-color-HASH00827a">BENEFICIO <br> POR ESCALÓN 2</p>
-          <p class="bef bef-d-flex bef-justifyContent-center bef-w-100per bef-r-0_5rem bef-bg-HASHE2E3E4">
-              {{ keytrudaData.benefitPerStepTwo | number : "1.2-2" }}
+          <p class="bef bef-d-flex bef-justifyContent-center bef-w-100per bef-r-0_5rem bef-bg-black">
+            $  {{ keytrudaData.benefitPerStepTwo | number : "1.2-2" }}
             </p>
 
         </div>
@@ -273,8 +281,8 @@
     </div>
   </section>
   <section class="bef">
-    <div class="bef bef-d-flex bef-flexDirection-row">
-      <div class="bef bef-w-45per bef-d-flex bef-p-2rem bef-pt-4rem bef-ret-5rem bef-bg-HASH00827a">
+    <div class="bef bef-d-flex bef-flexDirection-row bef-justifyContent-spaceMINbetween">
+      <div class="bef bef-w-90per bef-d-flex bef-p-2rem bef-pt-4rem bef-ret-5rem bef-bg-HASH00827a">
         <div
           class="bef bef-d-flex bef-flexDirection-column bef-justifyContent-end bef-alignItems-end"
         >
@@ -289,17 +297,17 @@
           <p
             class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{ (keytrudaCalculatorData$ | async)?.comertialOfferPercentage }}%
+            {{ (keytrudaCalculatorData$ | async)?.comertialOfferPercentage }} %
           </p>
           <p
             class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{ (keytrudaCalculatorData$ | async)?.comertialPlan }}%
+            {{ (keytrudaCalculatorData$ | async)?.comertialPlan }} %
           </p>
           <p
             class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{
+            $ {{
               (keytrudaCalculatorData$ | async)?.sugestedPriceWithComertialPlan
                 | number : "1.2-2"
             }}
@@ -307,7 +315,7 @@
           <p
             class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{
+            $ {{
               (keytrudaCalculatorData$ | async)?.rentabilityPerPiece
                 | number : "1.2-2"
             }}
@@ -315,7 +323,7 @@
           <p
             class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{
+            $ {{
               (keytrudaCalculatorData$ | async)?.rentabilityPerCycle
                 | number : "1.2-2"
             }}
@@ -323,14 +331,14 @@
           <p
             class="bef bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
           >
-            {{
+            $ {{
               (keytrudaCalculatorData$ | async)?.benefitOnfourteenCycles
                 | number : "1.2-2"
             }}
           </p>
         </div>
       </div>
-      <div class="bef bef-d-flex bef-flexDirection-column">
+      <div class="bef bef-d-flex bef-flexDirection-column bef-gap-1_5rem bef-p-2rem bef-w-100per bef-justifyContent-end bef-alignItems-end">
         <button class="bef bef-bg-transparent bef-bw-0">
           <svg
             width="224"
@@ -471,9 +479,9 @@
             </defs>
           </svg>
         </button>
-        <button class="bef bef-bg-transparent bef-bw-0 bef-w-auto">
+        <button class="bef bef-bg-transparent bef-bw-0 bef-w-20rem" routerLink="/">
           <img
-            class="bef bef-w-16rem"
+            class="bef bef-w-100per"
             src="../../../../../assets/images/bt-home.png"
             alt=""
           />
