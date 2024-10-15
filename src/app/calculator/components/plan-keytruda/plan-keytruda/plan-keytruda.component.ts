@@ -36,7 +36,7 @@ export class PlanKeytrudaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._bef.pushCssNamesParsed([
+    this._bef.cssCreate([
       'bef-bg-HASHe2e3e4',
       'bef-position-absolute',
       'bef-top-40px',
