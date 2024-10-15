@@ -8,6 +8,8 @@ export const keytrudaCalculatorData: TKeytrudaCalculatorData = {
   priceWithInitialOffer: 0,
   units: 0,
   stepOne: 0,
+  stepOnePersentage: 0,
+  stepTwoPersentage: 0,
   stepTwo: 0,
   benefitPerStepOne: 0,
   benefitPerStepTwo: 0,

@@ -6,6 +6,8 @@ export type TKeytrudaCalculatorData = {
   priceWithInitialOffer: number;
   units: number;
   stepOne: number;
+  stepOnePersentage: number;
+  stepTwoPersentage: number;
   stepTwo: number;
   benefitPerStepOne: number;
   benefitPerStepTwo: number;

@@ -24,6 +24,8 @@ export class KeytrudaService {
       priceWithInitialOffer: data?.initialOfferPrice() || 0,
       units: data?.units || 0,
       stepOne: data?.stepOne || 0,
+      stepOnePersentage: data?.stepOnePersentage || 0,
+      stepTwoPersentage: data?.stepTwoPersentage || 0,
       stepTwo: data?.stepTwo || 0,
       benefitPerStepOne: data?.benefitPerStepOne?.() ?? 0,
       benefitPerStepTwo: data?.benefitPerStepTwo?.() ?? 0,
