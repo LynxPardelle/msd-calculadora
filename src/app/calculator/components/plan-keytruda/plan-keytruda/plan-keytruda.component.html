@@ -1,6 +1,15 @@
 <div
   class="bef bef-w-100vw bef-h-100vh bef-p-1rem bef-ps-0 bef-pb-0 bef-d-flex bef-flexDirection-column bef-justifyContent-spaceMINbetween bef-gap-2rem"
 >
+  <section *ngIf="!!showFaqModal" class="modalTable">
+    <button
+      class="bef bef-position-absolute bef-top-40px bef-end-50px bef-w-40px bef-h-40px bef-border-0 bef-bg-transparent bef-color-transparent"
+      (click)="openFaqModal(false)"
+    >
+      X
+    </button>
+    <button routerLink="/">I AL MENÚ PRINCIPAL</button>
+  </section>
   <section>
     <svg
       class="bef bef-m-2rem__0__0__2_5rem"
@@ -236,7 +245,6 @@
       </div>
     </div>
   </section>
-
   <section>
     <div
       class="bef bef-d-flex flexDir-row bef-justifyContent-start bef-alignItems-end bef-gap-3rem bef-ps-5rem"
@@ -378,7 +386,7 @@
       class="bef bef-d-flex bef-flexDirection-row bef-justifyContent-spaceMINbetween"
     >
       <div
-        class="bef bef-w-90per bef-d-flex bef-p-2rem bef-pt-4rem bef-ret-5rem bef-bg-HASH00827a"
+        class="bef bef-w-90per bef-d-flex bef-p-2rem bef-pt-4rem bef-ret-5rem secondElement"
       >
         <div
           class="bef bef-d-flex bef-flexDirection-column bef-justifyContent-end bef-alignItems-end"

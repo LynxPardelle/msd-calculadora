@@ -18,7 +18,7 @@ import { Observable } from 'rxjs';
 })
 export class PlanKeytrudaComponent implements OnInit {
   keytrudaCalculatorData$!: Observable<TKeytrudaCalculatorData>;
-  @Input() title!: string | undefined;
+  @Input() title: string = 'HOSPITALES';
   showFaqModal: boolean = false;
 
   show: boolean = false;
@@ -36,11 +36,23 @@ export class PlanKeytrudaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._bef.pushCssNamesParsed(['bef-bg-HASHe2e3e4']);
+    this._bef.pushCssNamesParsed([
+      'bef-bg-HASHe2e3e4',
+      'bef-position-absolute',
+      'bef-top-40px',
+      'bef-end-50px',
+      'bef-w-40px',
+      'bef-h-40px',
+      'bef-border-0',
+      'bef-bg-transparent',
+      'bef-color-transparent',
+    ]);
     this.cssCreate();
     this.keytrudaCalculatorData$ =
       this._keytrudaService.keytrudaCalculatorData$;
-    this.title = this.options.find((option) => option.selected)?.title;
+    this.title =
+      this.options.find((option) => option.selected)?.title || 'HOSPITALES';
+    this._keytrudaService.selectionClick(this.title);
   }
 
   cssCreate() {
@@ -57,5 +69,8 @@ export class PlanKeytrudaComponent implements OnInit {
     this._keytrudaService.selectionClick(title);
   }
 
-  openFaqModal() {}
+  openFaqModal(open: boolean = true) {
+    console.log('openFaqModal', open);
+    this.showFaqModal = open;
+  }
 }
