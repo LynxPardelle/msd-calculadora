@@ -3,12 +3,12 @@
 >
   <section *ngIf="!!showFaqModal" class="modalTable">
     <button
-      class="bef bef-position-absolute bef-top-40px bef-end-50px bef-w-40px bef-h-40px bef-border-0 bef-bg-transparent bef-color-transparent"
+      class="ghostButtonExit"
       (click)="openFaqModal(false)"
     >
       X
     </button>
-    <button routerLink="/">I AL MENÚ PRINCIPAL</button>
+    <button class="ghostButtonHome" routerLink="/">IR AL MENÚ PRINCIPAL</button>
   </section>
   <section>
     <svg
