@@ -9,10 +9,11 @@ export class ExistsDirective implements OnInit {
   @Output('appExists') initEvent: EventEmitter<any> = new EventEmitter();
 
   ngOnInit(): void {
-    if(this.appExists){
-      setTimeout(()=>{
+    if (this.appExists) {
+      console.log('this.appExists', this.appExists);
+      setTimeout(() => {
         this.initEvent.emit();
-      },this.time);
+      }, this.time);
     }
   }
 }
