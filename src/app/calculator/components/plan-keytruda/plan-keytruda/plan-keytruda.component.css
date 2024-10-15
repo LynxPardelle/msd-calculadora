@@ -23,6 +23,8 @@
   background-color: #ffffff;
   min-height: 100vh;
   width: 100vw;
+  position: absolute;
+  z-index: 1000;
 }
 
 .ghostButtonHome{
@@ -31,8 +33,9 @@
   background: transparent;
   color: transparent;
   position: absolute;
-  top: 765px;
-  right: 60px;
+  bottom: 2rem;
+  right: 3rem;
+  height: 4rem;
 }
 
 .ghostButtonExit{
