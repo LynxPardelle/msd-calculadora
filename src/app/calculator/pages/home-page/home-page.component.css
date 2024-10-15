@@ -11,6 +11,7 @@
 }
 .miniText {
   font-size: 0.8rem;
+  margin-bottom: 0;
   color: #fff;
   font-family: "customGothamBook", sans-serif;
   text-align: center;

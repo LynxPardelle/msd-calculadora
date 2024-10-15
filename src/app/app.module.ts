@@ -22,6 +22,7 @@ import { CommonModule } from '@angular/common';
 
 import { DiscountComponent } from './shared/components/discount/discount.component';
 import { InputMaskModule } from '@ngneat/input-mask';
+import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { InputMaskModule } from '@ngneat/input-mask';
     InputMaskModule.forRoot({ inputSelector: 'input', isAsync: true }),
   ],
   providers: [
+    NgxBootstrapExpandedFeaturesService,
     provideAnimationsAsync(),
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: LocationStrategy, useClass: HashLocationStrategy },

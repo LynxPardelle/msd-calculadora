@@ -1,0 +1,610 @@
+<div
+  class="bef bef-w-100vw bef-h-100vh bef-p-1rem bef-ps-0 bef-pb-0 bef-d-flex bef-flexDirection-column bef-justifyContent-spaceMINbetween bef-gap-2rem"
+>
+  <section *ngIf="!!showFaqModal" class="modalTable">
+    <button
+      class="ghostButtonExit"
+      (click)="openFaqModal(false)"
+    >
+      X
+    </button>
+    <button class="ghostButtonHome" routerLink="/">IR AL MENÚ PRINCIPAL</button>
+  </section>
+  <section>
+    <svg
+      class="bef bef-m-2rem__0__0__2_5rem"
+      width="451"
+      height="67"
+      viewBox="0 0 451 67"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M210.38 42.67V24.63H217.75C219.88 24.63 221.56 25.2 222.8 26.34C224.04 27.48 224.66 28.99 224.66 30.86V30.91C224.66 32.92 223.97 34.48 222.6 35.59C221.23 36.7 219.48 37.25 217.37 37.25H214.36V42.66H210.39L210.38 42.67ZM214.35 33.73H217.49C218.45 33.73 219.22 33.47 219.78 32.96C220.35 32.44 220.63 31.79 220.63 31V30.95C220.63 30.07 220.35 29.4 219.78 28.93C219.21 28.46 218.42 28.22 217.41 28.22H214.34V33.73H214.35Z"
+        fill="#00807A"
+      />
+      <path
+        d="M227.59 42.67V24.63H231.56V39.06H240.55V42.67H227.59Z"
+        fill="#00807A"
+      />
+      <path
+        d="M241.99 42.67L249.72 24.5H253.38L261.11 42.67H256.96L255.31 38.63H247.68L246.03 42.67H241.99ZM249.11 35.12H253.9L251.5 29.27L249.1 35.12H249.11Z"
+        fill="#00807A"
+      />
+      <path
+        d="M263.9 42.67V24.63H267.56L276.01 35.74V24.63H279.93V42.67H276.55L267.81 31.2V42.67H263.89H263.9Z"
+        fill="#00807A"
+      />
+      <path
+        d="M291.98 42.67V24.63H295.95V32.51L303.27 24.63H308.06L300.72 32.28L308.4 42.66H303.63L298.04 34.98L295.95 37.14V42.65H291.98V42.67Z"
+        fill="#00807A"
+      />
+      <path
+        d="M310.79 42.67V24.63H324.39V28.16H314.73V31.82H323.23V35.35H314.73V39.14H324.52V42.67H310.79Z"
+        fill="#00807A"
+      />
+      <path
+        d="M333.13 42.67V35.56L326.2 24.63H330.84L335.14 31.87L339.52 24.63H344.03L337.1 35.48V42.67H333.13Z"
+        fill="#00807A"
+      />
+      <path
+        d="M350.7 42.67V28.29H345.21V24.63H360.16V28.29H354.67V42.67H350.7Z"
+        fill="#00807A"
+      />
+      <path
+        d="M363.2 42.67V24.63H371.45C373.74 24.63 375.49 25.24 376.71 26.46C377.74 27.49 378.26 28.87 378.26 30.58V30.63C378.26 33.4 376.97 35.26 374.39 36.22L378.8 42.66H374.16L370.29 36.89H367.17V42.66H363.2V42.67ZM367.17 33.4H371.19C372.14 33.4 372.88 33.17 373.42 32.7C373.96 32.24 374.23 31.62 374.23 30.85V30.8C374.23 29.96 373.95 29.32 373.41 28.88C372.86 28.44 372.1 28.22 371.12 28.22H367.18V33.4H367.17Z"
+        fill="#00807A"
+      />
+      <path
+        d="M389.35 42.95C386.89 42.95 384.98 42.27 383.6 40.9C382.22 39.53 381.54 37.55 381.54 34.93V24.62H385.51V34.82C385.51 36.26 385.85 37.37 386.53 38.13C387.21 38.89 388.17 39.28 389.4 39.28C390.63 39.28 391.59 38.91 392.27 38.17C392.95 37.43 393.29 36.36 393.29 34.95V24.62H397.26V34.8C397.26 37.48 396.56 39.51 395.16 40.88C393.76 42.25 391.82 42.94 389.35 42.94V42.95Z"
+        fill="#00807A"
+      />
+      <path
+        d="M401.31 42.67V24.63H408.34C411.14 24.63 413.44 25.48 415.23 27.19C417.02 28.9 417.92 31.03 417.92 33.59V33.64C417.92 36.22 417.02 38.36 415.23 40.08C413.44 41.8 411.14 42.66 408.34 42.66H401.31V42.67ZM408.34 28.22H405.27V39.09H408.34C409.95 39.09 411.26 38.59 412.27 37.6C413.27 36.6 413.78 35.31 413.78 33.71V33.66C413.78 32.06 413.28 30.76 412.27 29.74C411.26 28.72 409.95 28.22 408.34 28.22Z"
+        fill="#00807A"
+      />
+      <path
+        d="M418.62 42.67L426.35 24.5H430.01L437.74 42.67H433.59L431.94 38.63H424.31L422.66 42.67H418.61H418.62ZM425.73 35.12H430.52L428.12 29.27L425.72 35.12H425.73Z"
+        fill="#00807A"
+      />
+      <path
+        d="M448.44 32.67C447.38 33.74 446.09 34.27 444.58 34.27C443.07 34.27 441.79 33.74 440.73 32.69C439.68 31.63 439.15 30.36 439.15 28.87V28.84C439.15 27.35 439.68 26.07 440.74 25C441.8 23.93 443.09 23.4 444.6 23.4C446.11 23.4 447.39 23.93 448.45 24.98C449.5 26.04 450.03 27.31 450.03 28.8V28.83C450.03 30.32 449.5 31.6 448.44 32.67ZM441.16 32.27C442.08 33.2 443.22 33.67 444.58 33.67C445.94 33.67 447.09 33.2 448.01 32.26C448.94 31.32 449.4 30.18 449.4 28.83V28.8C449.4 27.46 448.94 26.32 448.02 25.39C447.1 24.46 445.96 23.99 444.6 23.99C443.24 23.99 442.09 24.46 441.17 25.4C440.24 26.34 439.78 27.48 439.78 28.82V28.85C439.78 30.19 440.24 31.33 441.15 32.26L441.16 32.27ZM442.36 31.57V25.79H444.93C445.7 25.79 446.3 26 446.72 26.42C447.04 26.74 447.2 27.16 447.2 27.68V27.71C447.2 28.6 446.78 29.2 445.95 29.5L447.36 31.57H445.87L444.64 29.71H443.63V31.57H442.35H442.36ZM443.63 28.61H444.91C445.22 28.61 445.46 28.53 445.64 28.38C445.82 28.23 445.9 28.03 445.9 27.78V27.75C445.9 27.19 445.56 26.91 444.88 26.91H443.63V28.61Z"
+        fill="#00807A"
+      />
+      <path
+        d="M193.87 16.1801V50.4801"
+        stroke="#00807A"
+        stroke-miterlimit="10"
+      />
+      <path
+        d="M34.15 33.33C43.36 33.33 50.82 40.79 50.82 50C60.02 50 67.49 42.54 67.49 33.33C67.49 24.12 60.03 16.66 50.82 16.66C50.82 25.87 43.36 33.33 34.15 33.33ZM17.48 50C17.48 59.21 24.94 66.67 34.15 66.67C43.36 66.67 50.82 59.21 50.82 50H17.49H17.48ZM17.48 50C17.48 40.8 24.94 33.33 34.15 33.33C24.95 33.33 17.48 25.87 17.48 16.66C8.28 16.66 0.809998 24.12 0.809998 33.33C0.809998 42.54 8.27 50 17.48 50ZM17.48 16.67C17.48 7.46 24.94 0 34.15 0C43.36 0 50.82 7.46 50.82 16.67H17.49H17.48Z"
+        fill="#4B837B"
+      />
+      <path
+        d="M160.97 43.87H158.03V22.75H160.97C169.07 22.75 171.98 28.03 171.98 33.31C171.98 38.59 169.06 43.87 160.97 43.87ZM161.45 16.63H150.83V49.93H161.45C170.28 49.93 179.24 44.83 179.24 33.31C179.24 21.79 170.28 16.63 161.45 16.63ZM147.05 26.51C147.05 19.93 141.99 16.1 135.94 16.1C129.89 16.1 123.4 19.61 123.4 26.44C123.4 32.36 129.91 35.4 133.63 36.36C135.67 36.9 140.82 37.48 140.82 41.16C140.82 44.84 137.22 45.61 134.52 45.61C131.05 45.61 129.01 43.18 129.31 39.5H122.48C122.24 47.79 127.88 50.88 134.46 51.03C142.07 51.2 147.88 47.95 147.88 40.63C147.88 33.31 141.29 32.1 136.14 30.43C134.14 29.78 130.45 29.21 130.45 25.81C130.45 22.96 132.91 21.6 135.42 21.6C138.65 21.6 140.33 23.2 140.57 26.52H147.04L147.05 26.51ZM109.49 16.67H119.82V50H112.17V27.58L102.38 50L92.08 27.56V50H84.94V16.67H95.15L102.51 33.92L109.51 16.67H109.49Z"
+        fill="#3E444C"
+      />
+    </svg>
+  </section>
+  <section
+    class="bef bef-d-flex bef-flexDirection-row bef-h-14rem bef-justifyContent-end bef-me-2rem bef-gap-1rem"
+  >
+    <svg
+      width="224"
+      height="51"
+      viewBox="0 0 224 51"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g filter="url(#filter0_d_0_1)">
+        <path
+          d="M16.48 2.43994H203.84C211.34 2.43994 217.43 8.52994 217.43 16.0299V30.7999C217.43 38.2999 211.34 44.3899 203.84 44.3899H16.48C8.97998 44.3899 2.89001 38.2999 2.89001 30.7999V16.0299C2.89001 8.52994 8.97998 2.43994 16.48 2.43994Z"
+          fill="url(#paint0_linear_0_1)"
+        />
+      </g>
+      <path
+        d="M78.62 27.9601C77.24 27.9601 76.06 27.5101 75.06 26.6201L76.15 25.3101C76.97 25.9901 77.81 26.3301 78.66 26.3301C79.04 26.3301 79.33 26.2601 79.55 26.1201C79.77 25.9801 79.87 25.7901 79.87 25.5401V25.5201C79.87 25.2801 79.76 25.0901 79.53 24.9401C79.31 24.7901 78.85 24.6301 78.17 24.4501C77.69 24.3301 77.3 24.2101 77.01 24.1001C76.71 23.9801 76.43 23.8301 76.16 23.6401C75.89 23.4501 75.7 23.2101 75.57 22.9301C75.45 22.6501 75.38 22.3001 75.38 21.8901V21.8701C75.38 21.1101 75.65 20.5001 76.2 20.0301C76.75 19.5701 77.45 19.3301 78.32 19.3301C79.51 19.3301 80.55 19.6901 81.44 20.4001L80.48 21.7901C79.69 21.2401 78.96 20.9601 78.3 20.9601C77.96 20.9601 77.69 21.0301 77.5 21.1601C77.31 21.3001 77.22 21.4701 77.22 21.6901V21.7101C77.22 21.9801 77.34 22.1901 77.57 22.3201C77.8 22.4601 78.29 22.6201 79.03 22.8101C79.94 23.0501 80.61 23.3601 81.05 23.7301C81.48 24.1001 81.7 24.6401 81.7 25.3301V25.3501C81.7 26.1701 81.42 26.8001 80.85 27.2601C80.29 27.7201 79.54 27.9501 78.61 27.9501L78.62 27.9601Z"
+        fill="white"
+      />
+      <path
+        d="M83.31 27.8401V19.4401H89.65V21.0801H85.15V22.7801H89.11V24.4201H85.15V26.1801H89.71V27.8201H83.31V27.8401Z"
+        fill="white"
+      />
+      <path
+        d="M95.4 27.98C94.1 27.98 93.04 27.57 92.22 26.76C91.4 25.95 90.98 24.91 90.98 23.66V23.64C90.98 22.43 91.4 21.41 92.24 20.56C93.08 19.72 94.13 19.29 95.38 19.29C96.11 19.29 96.72 19.3801 97.23 19.5701C97.74 19.7601 98.22 20.05 98.68 20.44L97.52 21.84C97.17 21.54 96.83 21.33 96.5 21.19C96.17 21.05 95.78 20.9901 95.32 20.9901C94.65 20.9901 94.08 21.25 93.61 21.76C93.14 22.27 92.91 22.89 92.91 23.61V23.6301C92.91 24.4001 93.15 25.03 93.62 25.54C94.1 26.04 94.71 26.3 95.45 26.3C96.14 26.3 96.72 26.13 97.19 25.8V24.6001H95.33V23H98.98V26.65C97.93 27.54 96.74 27.98 95.39 27.98H95.4Z"
+        fill="white"
+      />
+      <path
+        d="M100.76 27.8401V19.4401H102.75L104.96 22.9901L107.17 19.4401H109.16V27.8401H107.32V22.3601L104.96 25.9501H104.91L102.57 22.4001V27.8501H100.76V27.8401Z"
+        fill="white"
+      />
+      <path
+        d="M111.18 27.8401V19.4401H117.52V21.0801H113.02V22.7801H116.98V24.4201H113.02V26.1801H117.58V27.8201H111.18V27.8401Z"
+        fill="white"
+      />
+      <path
+        d="M119.22 27.8401V19.4401H120.92L124.86 24.6101V19.4401H126.68V27.8401H125.11L121.04 22.5001V27.8401H119.22Z"
+        fill="white"
+      />
+      <path
+        d="M130.65 27.8401V21.1401H128.09V19.4401H135.05V21.1401H132.49V27.8401H130.64H130.65Z"
+        fill="white"
+      />
+      <path
+        d="M143.39 26.7101C142.54 27.5501 141.47 27.98 140.19 27.98C138.91 27.98 137.85 27.56 137 26.73C136.16 25.89 135.73 24.87 135.73 23.66V23.64C135.73 22.43 136.16 21.41 137.01 20.56C137.86 19.72 138.93 19.29 140.21 19.29C141.49 19.29 142.55 19.71 143.4 20.54C144.24 21.38 144.67 22.4 144.67 23.61V23.6301C144.67 24.8401 144.24 25.8601 143.39 26.7101ZM138.39 25.51C138.87 26.02 139.48 26.28 140.21 26.28C140.94 26.28 141.55 26.0301 142.02 25.5201C142.49 25.0201 142.73 24.4 142.73 23.66V23.64C142.73 22.9 142.49 22.2801 142.01 21.7701C141.53 21.2601 140.92 21 140.19 21C139.46 21 138.85 21.25 138.38 21.76C137.91 22.26 137.67 22.88 137.67 23.62V23.64C137.67 24.38 137.91 25 138.39 25.51Z"
+        fill="white"
+      />
+      <defs>
+        <filter
+          id="filter0_d_0_1"
+          x="0.890015"
+          y="0.439941"
+          width="222.54"
+          height="49.95"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dx="2" dy="2" />
+          <feGaussianBlur stdDeviation="2" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_0_1"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_0_1"
+            result="shape"
+          />
+        </filter>
+        <linearGradient
+          id="paint0_linear_0_1"
+          x1="2.89001"
+          y1="23.4099"
+          x2="217.42"
+          y2="23.4099"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#56A39F" />
+          <stop offset="0.22" stop-color="#489994" />
+          <stop offset="0.62" stop-color="#267F79" />
+          <stop offset="1" stop-color="#00635C" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="bef bef-position-relative">
+      <button
+        class="bef bef-flexDirection-row bef-gap-1rem bef-bg-HASHeef6f5 bef-w-245px bef-color-HASH00827a bef-d-flex bef-alignItems-center bef-justifyContent-center bef-r-1rem bef-h-41_94px bef-boxShadow-2px__2px__4px__HASH00000050 bef-border-0"
+        (click)="showOptions()"
+      >
+        <p
+          class="bef bef-m-0 bef-fontSize-14px bef-w-calcSD100per__MIN__23pxED"
+        >
+          {{ this.title }}
+        </p>
+        <svg
+          width="23"
+          height="13"
+          viewBox="0 0 23 13"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.84003 1.69995H21.16"
+            stroke="#00635C"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1.84003 6.63H21.16"
+            stroke="#00635C"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1.84003 11.5599H21.16"
+            stroke="#00635C"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <div
+        class="bef bef-gap-0_2rem bef-position-absolute bef-top-45px"
+        [ngStyle]="
+          this.show
+            ? { display: 'flex', flexDirection: 'column' }
+            : { display: 'none' }
+        "
+      >
+        @for(option of options; track options){
+
+        <button
+          class="bef bef-bg-HASHeef6f5 bef-w-245px bef-boxShadow-2px__2px__4px__HASH00000050 bef-border-0 bef-color-HASH00827a bef-r-1rem bef-h-41_94px bef-d-flex bef-alignItems-center bef-justifyContent-center"
+          (click)="select(option.title)"
+        >
+          <p class="bef bef-m-0 bef-fontSize-14px">{{ option.title }}</p>
+        </button>
+
+        }
+      </div>
+    </div>
+  </section>
+  <section>
+    <div
+      class="bef bef-d-flex flexDir-row bef-justifyContent-start bef-alignItems-end bef-gap-3rem bef-ps-5rem"
+    >
+      <div
+        class="bef bef-d-flex bef-flexDirection-column bef-alignItems-center"
+      >
+        <p class="bef bef-fs-14px bef-fontWeight-BOLD">UNIDADES POR PRODUCTO</p>
+        <span class="bef bef-mb-1rem bef-fs-14px bef-p-0_5rem">KEYTRUDA®</span>
+      </div>
+      <div
+        class="bef bef-d-flex bef-flexDirection-column bef-alignItems-center"
+      >
+        <p class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD">
+          PMP
+        </p>
+        <p class="bef bef-r-0_5rem bef-fs-14px bef-p-0_5rem">
+          $ {{ (keytrudaCalculatorData$ | async)?.pmp | number : "1.2-2" }}
+        </p>
+      </div>
+      <div
+        class="bef bef-d-flex bef-flexDirection-column bef-alignItems-center"
+      >
+        <p
+          class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-textAlign-center"
+        >
+          Oferta <br />
+          comercial MSD ({{
+            (keytrudaCalculatorData$ | async)?.comertialOfferPercentage
+          }}%)
+        </p>
+        <p
+          class="bef bef-r-0_5rem bef-fs-14px bef-bg-HASHeef6f5 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
+        >
+          $
+          {{
+            (keytrudaCalculatorData$ | async)?.comertialOfferDiscount
+              | number : "1.2-2"
+          }}
+        </p>
+      </div>
+      <div>
+        <p class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD">
+          Precio con <br />
+          oferta inicial
+        </p>
+        <p
+          class="bef bef-r-0_5rem bef-fs-14px bef-bg-HASHeef6f5 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
+        >
+          $
+          {{
+            (keytrudaCalculatorData$ | async)?.priceWithInitialOffer
+              | number : "1.2-2"
+          }}
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div
+      class="bef bef-ps-5rem"
+      *ngIf="keytrudaCalculatorData$ | async as keytrudaData"
+    >
+      <h5
+        [appExists]="!!keytrudaData"
+        (appExists)="cssCreate()"
+        class="bef bef-textAlign-center bef-fontWeight-BOLD bef-my-1rem bef-w-63per"
+      >
+        PLAN COMERCIAL
+      </h5>
+      <div class="bef bef-d-flex bef-flexDirection-row bef-gap-1rem">
+        <div class="bef bef-w-132px">
+          <p
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+          >
+            UNIDADES
+          </p>
+          <p
+            class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
+          >
+            {{ keytrudaData.units }}
+          </p>
+        </div>
+        <div class="bef bef-w-132px">
+          <p
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+          >
+            ESCALÓN 1 ({{keytrudaData.stepOnePersentage}}%)
+          </p>
+          <p
+            class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
+          >
+            {{ keytrudaData.stepOne }}
+          </p>
+        </div>
+        <div class="bef bef-w-132px">
+          <p
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+          >
+            ESCALÓN 2 ({{keytrudaData.stepOnePersentage}}%)
+          </p>
+          <p
+            class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
+          >
+            {{ keytrudaData.stepTwo }}
+          </p>
+        </div>
+        <div class="bef bef-w-132px">
+          <p
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+          >
+            BENEFICIO<br />
+            POR ESCALÓN 1
+          </p>
+          <p
+            class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
+          >
+            $ {{ keytrudaData.benefitPerStepOne | number : "1.2-2" }}
+          </p>
+        </div>
+        <div class="bef bef-w-132px">
+          <p
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+          >
+            BENEFICIO <br />
+            POR ESCALÓN 2
+          </p>
+          <p
+            class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
+          >
+            $ {{ keytrudaData.benefitPerStepTwo | number : "1.2-2" }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bef">
+    <div
+      class="bef bef-d-flex bef-flexDirection-row bef-justifyContent-spaceMINbetween"
+    >
+      <div
+        class="bef bef-w-90per bef-d-flex bef-p-2rem bef-pt-4rem bef-ret-5rem secondElement"
+      >
+        <div
+          class="bef bef-d-flex bef-flexDirection-column bef-justifyContent-end bef-alignItems-end"
+        >
+          <p class="bef bef-fs-14px">OFERTA COMERCIAL</p>
+          <p class="bef bef-fs-14px">PLAN COMERCIAL</p>
+          <p class="bef bef-fs-14px">PRECIO SUGERIDO CON PLAN COMERCIAL</p>
+          <p class="bef bef-fs-14px">RENTABILIDAD POR PIEZA</p>
+          <p class="bef bef-fs-14px">RENTABILIDAD POR CICLO</p>
+          <p class="bef bef-fs-14px">BENEFICIO A 14 CICLOS</p>
+        </div>
+        <div class="bef bef-w-10rem bef-ms-0_5rem">
+          <p
+            class="bef bef-fs-14px bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
+          >
+            {{ (keytrudaCalculatorData$ | async)?.comertialOfferPercentage }} %
+          </p>
+          <p
+            class="bef bef-fs-14px bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
+          >
+            {{ (keytrudaCalculatorData$ | async)?.comertialPlan }} %
+          </p>
+          <p
+            class="bef bef-fs-14px bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
+          >
+            $
+            {{
+              (keytrudaCalculatorData$ | async)?.sugestedPriceWithComertialPlan
+                | number : "1.2-2"
+            }}
+          </p>
+          <p
+            class="bef bef-fs-14px bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
+          >
+            $
+            {{
+              (keytrudaCalculatorData$ | async)?.rentabilityPerPiece
+                | number : "1.2-2"
+            }}
+          </p>
+          <p
+            class="bef bef-fs-14px bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
+          >
+            $
+            {{
+              (keytrudaCalculatorData$ | async)?.rentabilityPerCycle
+                | number : "1.2-2"
+            }}
+          </p>
+          <p
+            class="bef bef-fs-14px bef-d-flex bef-justifyContent-center bef-bg-white bef-r-0_6rem"
+          >
+            $
+            {{
+              (keytrudaCalculatorData$ | async)?.benefitOnfourteenCycles
+                | number : "1.2-2"
+            }}
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="bef bef-d-flex bef-flexDirection-column bef-gap-1_5rem bef-p-2rem bef-w-100per bef-justifyContent-end bef-alignItems-end"
+      >
+        <button
+          class="bef bef-bg-transparent bef-bw-0"
+          (click)="openFaqModal()"
+        >
+          <svg
+            width="224"
+            height="51"
+            viewBox="0 0 224 51"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_d_0_1)">
+              <path
+                d="M16.2499 2.92993H203.61C211.11 2.92993 217.2 9.01996 217.2 16.52V31.2899C217.2 38.7899 211.11 44.8799 203.61 44.8799H16.2499C8.74994 44.8799 2.65991 38.7899 2.65991 31.2899V16.52C2.65991 9.01996 8.74994 2.92993 16.2499 2.92993Z"
+                fill="url(#paint0_linear_0_1)"
+              />
+            </g>
+            <path
+              d="M26.3 20.96H27.99L31.55 29.33H29.64L28.88 27.4699H25.37L24.61 29.33H22.75L26.31 20.96H26.3ZM28.22 25.8499L27.12 23.1599L26.02 25.8499H28.23H28.22Z"
+              fill="white"
+            />
+            <path
+              d="M32.8301 21.02H34.5201L38.41 26.14V21.02H40.2101V29.33H38.6501L34.6301 24.05V29.33H32.8301V21.02Z"
+              fill="white"
+            />
+            <path
+              d="M45.07 20.96H46.76L50.32 29.33H48.41L47.65 27.47H44.14L43.38 29.33H41.52L45.08 20.96H45.07ZM46.99 25.85L45.89 23.16L44.79 25.85H47H46.99ZM46.61 18.38L48.16 19.06L46.55 20.25H45.17L46.61 18.39V18.38Z"
+              fill="white"
+            />
+            <path
+              d="M51.6 21.02H53.43V27.67H57.57V29.33H51.6V21.02Z"
+              fill="white"
+            />
+            <path d="M59.04 21.02H60.8701V29.33H59.04V21.02Z" fill="white" />
+            <path
+              d="M62.37 28.1099L63.45 26.8199C64.21 27.4399 64.98 27.83 65.93 27.83C66.69 27.83 67.13 27.5299 67.13 27.0499V27.03C67.13 26.57 66.84 26.3199 65.46 25.9699C63.77 25.5499 62.71 25.0699 62.71 23.4299V23.4099C62.71 21.8999 63.91 20.9099 65.62 20.9099C66.84 20.9099 67.85 21.2899 68.71 21.9699L67.76 23.3499C67.01 22.8399 66.31 22.53 65.6 22.53C64.89 22.53 64.53 22.8399 64.53 23.2499V23.27C64.53 23.83 64.89 23.9799 66.32 24.3599C68.01 24.8099 68.96 25.3999 68.96 26.8499V26.8699C68.96 28.5199 67.7 29.45 65.91 29.45C64.64 29.45 63.38 29.0199 62.38 28.1199L62.37 28.1099Z"
+              fill="white"
+            />
+            <path d="M70.63 21.02H72.46V29.33H70.63V21.02Z" fill="white" />
+            <path
+              d="M73.96 28.1099L75.0399 26.8199C75.7999 27.4399 76.57 27.83 77.52 27.83C78.28 27.83 78.7199 27.5299 78.7199 27.0499V27.03C78.7199 26.57 78.4299 26.3199 77.0499 25.9699C75.3599 25.5499 74.2999 25.0699 74.2999 23.4299V23.4099C74.2999 21.8999 75.5 20.9099 77.21 20.9099C78.43 20.9099 79.4399 21.2899 80.2999 21.9699L79.3499 23.3499C78.5999 22.8399 77.8999 22.53 77.1899 22.53C76.4799 22.53 76.1199 22.8399 76.1199 23.2499V23.27C76.1199 23.83 76.4799 23.9799 77.9099 24.3599C79.5999 24.8099 80.5499 25.3999 80.5499 26.8499V26.8699C80.5499 28.5199 79.2899 29.45 77.4999 29.45C76.2299 29.45 74.9699 29.0199 73.9699 28.1199L73.96 28.1099Z"
+              fill="white"
+            />
+            <path
+              d="M85.7 21.02H88.9399C91.5499 21.02 93.3599 22.81 93.3599 25.15V25.17C93.3599 27.51 91.5599 29.33 88.9399 29.33H85.7V21.02ZM87.53 22.67V27.68H88.9399C90.4199 27.68 91.4399 26.67 91.4399 25.2V25.18C91.4399 23.71 90.4199 22.68 88.9399 22.68H87.53V22.67Z"
+              fill="white"
+            />
+            <path
+              d="M94.99 21.02H101.26V22.65H96.81V24.34H100.73V25.97H96.81V27.72H101.32V29.35H94.99V21.04V21.02Z"
+              fill="white"
+            />
+            <path
+              d="M106.14 25.19V25.17C106.14 22.81 107.92 20.87 110.47 20.87C112.03 20.87 112.99 21.39 113.75 22.15L112.59 23.49C111.94 22.91 111.31 22.55 110.47 22.55C109.07 22.55 108.06 23.71 108.06 25.14V25.16C108.06 26.58 109.05 27.77 110.47 27.77C111.42 27.77 112 27.4 112.65 26.8L113.81 27.98C112.96 28.89 112.02 29.46 110.4 29.46C107.95 29.46 106.14 27.57 106.14 25.19Z"
+              fill="white"
+            />
+            <path
+              d="M114.67 25.19V25.17C114.67 22.81 116.53 20.87 119.1 20.87C121.67 20.87 123.5 22.78 123.5 25.14V25.16C123.5 27.52 121.64 29.46 119.07 29.46C116.5 29.46 114.67 27.55 114.67 25.19ZM121.59 25.19V25.17C121.59 23.75 120.55 22.56 119.07 22.56C117.59 22.56 116.58 23.72 116.58 25.15V25.17C116.58 26.59 117.62 27.78 119.1 27.78C120.58 27.78 121.59 26.62 121.59 25.19Z"
+              fill="white"
+            />
+            <path
+              d="M125.13 21.02H127.1L129.28 24.53L131.46 21.02H133.43V29.33H131.61V23.9L129.27 27.45H129.22L126.91 23.94V29.33H125.12V21.02H125.13Z"
+              fill="white"
+            />
+            <path
+              d="M135.44 21.02H138.84C140.82 21.02 142.02 22.18 142.02 23.89V23.91C142.02 25.85 140.52 26.83 138.66 26.83H137.27V29.32H135.44V21.01V21.02ZM138.72 25.21C139.63 25.21 140.17 24.66 140.17 23.95V23.93C140.17 23.11 139.6 22.67 138.69 22.67H137.28V25.21H138.73H138.72Z"
+              fill="white"
+            />
+            <path
+              d="M143.37 21.02H149.64V22.65H145.19V24.34H149.11V25.97H145.19V27.72H149.7V29.35H143.37V21.04V21.02Z"
+              fill="white"
+            />
+            <path
+              d="M153.27 22.7H150.74V21.01H157.63V22.7H155.1V29.32H153.27V22.7Z"
+              fill="white"
+            />
+            <path
+              d="M159.03 21.02H165.3V22.65H160.85V24.34H164.77V25.97H160.85V27.72H165.36V29.35H159.03V21.04V21.02Z"
+              fill="white"
+            />
+            <path
+              d="M166.99 21.02H168.68L172.57 26.14V21.02H174.37V29.33H172.82L168.8 24.05V29.33H167V21.02H166.99Z"
+              fill="white"
+            />
+            <path
+              d="M176 25.19V25.17C176 22.81 177.78 20.87 180.33 20.87C181.89 20.87 182.85 21.39 183.61 22.15L182.45 23.49C181.8 22.91 181.17 22.55 180.33 22.55C178.93 22.55 177.92 23.71 177.92 25.14V25.16C177.92 26.58 178.91 27.77 180.33 27.77C181.28 27.77 181.86 27.4 182.51 26.8L183.67 27.98C182.82 28.89 181.88 29.46 180.26 29.46C177.81 29.46 176 27.57 176 25.19Z"
+              fill="white"
+            />
+            <path d="M185.22 21.02H187.05V29.33H185.22V21.02Z" fill="white" />
+            <path
+              d="M191.97 20.96H193.66L197.22 29.33H195.31L194.55 27.4699H191.04L190.28 29.33H188.42L191.98 20.96H191.97ZM193.9 25.8499L192.8 23.1599L191.7 25.8499H193.91H193.9Z"
+              fill="white"
+            />
+            <defs>
+              <filter
+                id="filter0_d_0_1"
+                x="0.659912"
+                y="0.929932"
+                width="222.54"
+                height="49.95"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dx="2" dy="2" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_0_1"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_0_1"
+                  result="shape"
+                />
+              </filter>
+              <linearGradient
+                id="paint0_linear_0_1"
+                x1="2.65991"
+                y1="23.8999"
+                x2="217.2"
+                y2="23.8999"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#56A39F" />
+                <stop offset="0.22" stop-color="#489994" />
+                <stop offset="0.62" stop-color="#267F79" />
+                <stop offset="1" stop-color="#00635C" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </button>
+        <button
+          class="bef bef-bg-transparent bef-bw-0 bef-w-20rem"
+          routerLink="/"
+        >
+          <img
+            class="bef bef-w-100per"
+            src="../../../../../assets/images/bt-home.png"
+            alt=""
+          />
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DecimalPipe } from '@angular/common';
 
 import { CalculatorRoutingModule } from './calculator-routing.module';
 
@@ -12,6 +12,11 @@ import { QuotationComponent } from './pages/simulator/components/quotation/quota
 import { TransfersTableComponent } from './pages/transfers/components/transfers-table/transfers-table.component';
 import { TransfersQuotationComponent } from './pages/transfers/components/transfers-quotation/transfers-quotation.component';
 import { InputMaskModule } from '@ngneat/input-mask';
+import { PlanKeytrudaComponent } from './components/plan-keytruda/plan-keytruda/plan-keytruda.component';
+import { FaqComponent } from './components/faq/faq/faq.component';
+import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
+import { ExistsDirective } from './directives/exists.directive';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { InputMaskModule } from '@ngneat/input-mask';
     TransfersTableComponent,
     QuotationComponent,
     TransfersQuotationComponent,
+    PlanKeytrudaComponent,
+    FaqComponent,
+    ExistsDirective,
+
   ],
-  imports: [CommonModule, CalculatorRoutingModule, InputMaskModule],
+  imports: [CommonModule, CalculatorRoutingModule, InputMaskModule, DecimalPipe],
+  providers: [NgxBootstrapExpandedFeaturesService],
 })
 export class CalculatorModule {}

@@ -6,6 +6,8 @@ import { PrincipalLayoutComponent } from '../shared/layouts/principal-layout.com
 import { SimulatorComponent } from './pages/simulator/simulator.component';
 import { TransfersComponent } from './pages/transfers/transfers.component';
 import { TopCostumersComponent } from './pages/top-costumers/top-costumers.component';
+import { PlanKeytrudaComponent } from './components/plan-keytruda/plan-keytruda/plan-keytruda.component';
+import { FaqComponent } from './components/faq/faq/faq.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'keytruda',
+    component: PlanKeytrudaComponent,
+  },
+  {
+    path: 'faq',
+    component: FaqComponent,
+  }
 ];
 
 @NgModule({
