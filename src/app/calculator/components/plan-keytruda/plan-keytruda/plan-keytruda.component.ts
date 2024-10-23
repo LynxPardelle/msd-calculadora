@@ -1,11 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-  SimpleChange,
-} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
 import { KeytrudaService } from '../../../services/keytruda.service';
 import { TKeytrudaCalculatorData } from '../../../types/keytrudaCalculatorData.type';

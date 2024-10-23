@@ -1,13 +1,8 @@
 <div
-  class="bef bef-w-100vw bef-h-100vh bef-p-1rem bef-ps-0 bef-pb-0 bef-d-flex bef-flexDirection-column bef-justifyContent-spaceMINbetween bef-gap-2rem"
+  class="bef bef-w-100vw bef-h-100vh bef-p-1rem bef-ps-0 bef-pb-0 bef-d-flex bef-flexDirection-column bef-justifyContent-spaceMINbetween bef-gap-1_5rem"
 >
   <section *ngIf="!!showFaqModal" class="modalTable">
-    <button
-      class="ghostButtonExit"
-      (click)="openFaqModal(false)"
-    >
-      X
-    </button>
+    <button class="ghostButtonExit" (click)="openFaqModal(false)">X</button>
     <button class="ghostButtonHome" routerLink="/">IR AL MENÚ PRINCIPAL</button>
   </section>
   <section>
@@ -332,7 +327,7 @@
           <p
             class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
           >
-            ESCALÓN 1 ({{keytrudaData.stepOnePersentage}}%)
+            ESCALÓN 1 ({{ keytrudaData.stepOnePersentage }}%)
           </p>
           <p
             class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
@@ -344,7 +339,7 @@
           <p
             class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
           >
-            ESCALÓN 2 ({{keytrudaData.stepOnePersentage}}%)
+            ESCALÓN 2 ({{ keytrudaData.stepOnePersentage }}%)
           </p>
           <p
             class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
@@ -600,7 +595,7 @@
         >
           <img
             class="bef bef-w-100per"
-            src="../../../../../assets/images/bt-home.png"
+            src="./assets/images/bt-home.png"
             alt=""
           />
         </button>
