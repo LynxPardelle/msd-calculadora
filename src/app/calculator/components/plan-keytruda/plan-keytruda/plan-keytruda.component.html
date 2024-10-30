@@ -1,5 +1,5 @@
 <div
-  class="bef bef-w-100vw bef-h-100vh bef-p-1rem bef-ps-0 bef-pb-0 bef-d-flex bef-flexDirection-column bef-justifyContent-spaceMINbetween bef-gap-1_5rem"
+  class="bef bef-w-100vw bef-h-100vh bef-p-1rem bef-ps-0 bef-pb-0 bef-d-flex bef-flexDirection-column bef-justifyContent-spaceMINbetween bef-gap-0_75rem"
 >
   <section *ngIf="!!showFaqModal" class="modalTable">
     <button class="ghostButtonExit" (click)="openFaqModal(false)">X</button>
@@ -7,7 +7,7 @@
   </section>
   <section>
     <svg
-      class="bef bef-m-2rem__0__0__2_5rem"
+      class="bef bef-m-0_5rem__0__0__2_5rem"
       width="451"
       height="67"
       viewBox="0 0 451 67"
@@ -185,10 +185,9 @@
         (click)="showOptions()"
       >
         <p
-          class="bef bef-m-0 bef-fontSize-14px bef-w-calcSD100per__MIN__23pxED"
-        >
-          {{ this.title }}
-        </p>
+          class="bef bef-m-0 bef-fontSize-14px bef-w-222px"
+          [innerHTML]="this.title | lineBreakerSpecialized"
+        ></p>
         <svg
           width="23"
           height="13"
@@ -230,12 +229,10 @@
         @for(option of options; track options){
 
         <button
-          class="bef bef-bg-HASHeef6f5 bef-w-245px bef-boxShadow-2px__2px__4px__HASH00000050 bef-border-0 bef-color-HASH00827a bef-r-1rem bef-h-41_94px bef-d-flex bef-alignItems-center bef-justifyContent-center"
+          class="bef bef-bg-HASHeef6f5 bef-w-245px bef-boxShadow-2px__2px__4px__HASH00000050 bef-border-0 bef-color-HASH00827a bef-r-1rem bef-h-41_94px bef-d-flex bef-alignItems-center bef-justifyContent-center bef-fontSize-14px"
           (click)="select(option.title)"
-        >
-          <p class="bef bef-m-0 bef-fontSize-14px">{{ option.title }}</p>
-        </button>
-
+          [innerHTML]="option.title | lineBreakerSpecialized"
+        ></button>
         }
       </div>
     </div>
@@ -313,43 +310,49 @@
       <div class="bef bef-d-flex bef-flexDirection-row bef-gap-1rem">
         <div class="bef bef-w-132px">
           <p
-            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
           >
             UNIDADES
           </p>
-          <p
-            class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
-          >
-            {{ keytrudaData.units }}
-          </p>
+          <input
+            class="form-control text-center bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem bef-border-none bef-outline-none"
+            [value]="keytrudaData.units"
+            type="number"
+            (change)="onInputChange(keytrudaData, 'units', $event)"
+            placeholder="0"
+          />
         </div>
         <div class="bef bef-w-132px">
           <p
-            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
           >
             ESCALÓN 1 ({{ keytrudaData.stepOnePersentage }}%)
           </p>
-          <p
-            class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
-          >
-            {{ keytrudaData.stepOne }}
-          </p>
+          <input
+            class="form-control text-center bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem bef-border-none bef-outline-none"
+            [value]="keytrudaData.stepOne"
+            type="number"
+            (change)="onInputChange(keytrudaData, 'stepOne', $event)"
+            placeholder="0"
+          />
         </div>
         <div class="bef bef-w-132px">
           <p
-            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
           >
             ESCALÓN 2 ({{ keytrudaData.stepOnePersentage }}%)
           </p>
-          <p
-            class="bef bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem"
-          >
-            {{ keytrudaData.stepTwo }}
-          </p>
+          <input
+            class="form-control text-center bef-fs-14px bef-bg-HASHe2e3e4 bef-r-2rem bef-w-100per bef-textAlign-center bef-p-0_5rem bef-border-none bef-outline-none"
+            [value]="keytrudaData.stepTwo"
+            type="number"
+            (change)="onInputChange(keytrudaData, 'stepTwo', $event)"
+            placeholder="0"
+          />
         </div>
         <div class="bef bef-w-132px">
           <p
-            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
           >
             BENEFICIO<br />
             POR ESCALÓN 1
@@ -362,7 +365,7 @@
         </div>
         <div class="bef bef-w-132px">
           <p
-            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex -bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
+            class="bef bef-color-HASH00827a bef-fs-14px bef-fontWeight-BOLD bef-h-42px bef-d-flex bef-justifyContent-center bef-alignItems-flexMINend bef-textAlign-center bef-mx-auto"
           >
             BENEFICIO <br />
             POR ESCALÓN 2

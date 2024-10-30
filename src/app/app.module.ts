@@ -23,6 +23,7 @@ import { CommonModule } from '@angular/common';
 import { DiscountComponent } from './shared/components/discount/discount.component';
 import { InputMaskModule } from '@ngneat/input-mask';
 import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
+
 @NgModule({
   declarations: [
     AppComponent,

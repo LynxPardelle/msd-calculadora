@@ -16,7 +16,7 @@ import { PlanKeytrudaComponent } from './components/plan-keytruda/plan-keytruda/
 import { FaqComponent } from './components/faq/faq/faq.component';
 import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
 import { ExistsDirective } from './directives/exists.directive';
-
+import { LineBreakerSpecializedPipe } from '../shared/pipes/line-breaker-specialized.pipe';
 
 @NgModule({
   declarations: [
@@ -31,9 +31,14 @@ import { ExistsDirective } from './directives/exists.directive';
     PlanKeytrudaComponent,
     FaqComponent,
     ExistsDirective,
-
+    LineBreakerSpecializedPipe,
   ],
-  imports: [CommonModule, CalculatorRoutingModule, InputMaskModule, DecimalPipe],
+  imports: [
+    CommonModule,
+    CalculatorRoutingModule,
+    InputMaskModule,
+    DecimalPipe,
+  ],
   providers: [NgxBootstrapExpandedFeaturesService],
 })
 export class CalculatorModule {}

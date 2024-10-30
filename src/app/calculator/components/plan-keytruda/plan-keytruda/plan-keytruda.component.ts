@@ -62,6 +62,15 @@ export class PlanKeytrudaComponent implements OnInit {
     this._keytrudaService.selectionClick(title);
   }
 
+  onInputChange(data: any, key: 'units' | 'stepOne' | 'stepTwo', event: Event) {
+    const target = event.target as HTMLInputElement;
+    const value = target.value;
+    const newValue = parseFloat(
+      value.replace(/\$/, '').replace(/,/g, '').trim()
+    );
+    this._keytrudaService.valueChange(data, key, newValue);
+  }
+
   openFaqModal(open: boolean = true) {
     console.log('openFaqModal', open);
     this.showFaqModal = open;

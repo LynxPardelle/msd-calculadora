@@ -5,16 +5,19 @@ import { BehaviorSubject } from 'rxjs';
 import { KeytrudaConfig } from '../data/keytrudaConfig';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class KeytrudaService {
   private keytrudaConfig = KeytrudaConfig;
-  private keytrudaCalculatorDataSubject = new BehaviorSubject<TKeytrudaCalculatorData>(keytrudaCalculatorData);
+  private keytrudaCalculatorDataSubject =
+    new BehaviorSubject<TKeytrudaCalculatorData>(keytrudaCalculatorData);
   keytrudaCalculatorData$ = this.keytrudaCalculatorDataSubject.asObservable();
-  constructor() { }
+  constructor() {}
 
-  selectionClick(title: string){
-    let data = this.keytrudaConfig.segmento.find((segmento) => segmento.title === title);
+  selectionClick(title: string) {
+    let data = this.keytrudaConfig.segmento.find(
+      (segmento) => segmento.title === title
+    );
     console.log(data);
     this.keytrudaCalculatorDataSubject.next({
       page: data!.title,
@@ -35,6 +38,26 @@ export class KeytrudaService {
       rentabilityPerPiece: data?.rentabilityPerPiece() || 0,
       rentabilityPerCycle: data?.rentabilityPerCycle() || 0,
       benefitOnfourteenCycles: data?.fourteenCyclesBenefit() || 0,
-  });
-}
+    });
+  }
+
+  valueChange(
+    data: TKeytrudaCalculatorData,
+    key: 'units' | 'stepOne' | 'stepTwo',
+    value: number
+  ) {
+    let newData = { ...data, [key]: value };
+    switch (key) {
+      case 'stepOne':
+        newData.benefitPerStepOne = newData.stepOne * newData.pmp * 0.02;
+        break;
+      case 'stepTwo':
+        newData.benefitPerStepTwo = newData.stepTwo * newData.pmp * 0.04;
+        break;
+      default:
+        // Do nothing
+        break;
+    }
+    this.keytrudaCalculatorDataSubject.next(newData);
+  }
 }
