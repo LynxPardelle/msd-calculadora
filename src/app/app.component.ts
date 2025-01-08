@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { SimulatorService } from './calculator/services/simulator.service';
 
 @Component({
-  selector: 'app-root',
-  template: ` @if(!payRelease){
+    selector: 'app-root',
+    template: ` @if(!payRelease){
     <div
       class="text-center w-100 z-3 position-fixed top-50"
       style="opacity: 0.5; text-shadow: 0 0 3px #fff; "
@@ -11,6 +11,7 @@ import { SimulatorService } from './calculator/services/simulator.service';
       {{ textPayRelease }}
     </div>
     } <router-outlet></router-outlet>`,
+    standalone: false
 })
 export class AppComponent {
   private _simulatorService = inject(SimulatorService);

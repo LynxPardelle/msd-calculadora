@@ -5,9 +5,10 @@ import { TKeytrudaCalculatorData } from '../../../types/keytrudaCalculatorData.t
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-plan-keytruda',
-  templateUrl: './plan-keytruda.component.html',
-  styleUrl: './plan-keytruda.component.css',
+    selector: 'app-plan-keytruda',
+    templateUrl: './plan-keytruda.component.html',
+    styleUrl: './plan-keytruda.component.css',
+    standalone: false
 })
 export class PlanKeytrudaComponent implements OnInit {
   keytrudaCalculatorData$!: Observable<TKeytrudaCalculatorData>;

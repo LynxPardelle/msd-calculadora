@@ -2,9 +2,10 @@ import { Component, inject, Input, OnInit } from '@angular/core';
 import { SimulatorService } from '../../services/simulator.service';
 
 @Component({
-  selector: 'app-top-costumers',
-  templateUrl: './top-costumers.component.html',
-  styleUrl: './top-costumers.component.css',
+    selector: 'app-top-costumers',
+    templateUrl: './top-costumers.component.html',
+    styleUrl: './top-costumers.component.css',
+    standalone: false
 })
 export class TopCostumersComponent implements OnInit {
   private _simulatorService = inject(SimulatorService);

@@ -1,7 +1,8 @@
 import { Directive, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appExists]',
+    selector: '[appExists]',
+    standalone: false
 })
 export class ExistsDirective implements OnInit {
   @Input() appExists!: boolean;

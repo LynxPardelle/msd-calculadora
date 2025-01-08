@@ -4,9 +4,10 @@ import { SimulatorService } from '../../../../services/simulator.service';
 import { createMask } from '@ngneat/input-mask';
 
 @Component({
-  selector: 'app-simulator-table',
-  templateUrl: './simulator-table.component.html',
-  styleUrl: './simulator-table.component.css',
+    selector: 'app-simulator-table',
+    templateUrl: './simulator-table.component.html',
+    styleUrl: './simulator-table.component.css',
+    standalone: false
 })
 export class SimulatorTableComponent {
   @Input({ required: true }) productItems: Products[] = [];

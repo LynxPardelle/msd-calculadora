@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-not-found',
-  templateUrl: './not-found.component.html',
-  styles: `
+    selector: 'app-not-found',
+    templateUrl: './not-found.component.html',
+    styles: `
 .customHomeMenuBtn {
   background: #56A39F;
   background: -moz-linear-gradient(
@@ -37,5 +37,6 @@ import { Component } from '@angular/core';
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75), 2px 2px 6px rgba(0, 0, 0, 0.5);
   font-family: "customGothamBook", sans-serif;
 }`,
+    standalone: false
 })
 export class NotFoundComponent {}

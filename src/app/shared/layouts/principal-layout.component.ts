@@ -2,9 +2,10 @@ import { Component, inject } from '@angular/core';
 import { SimulatorService } from '../../calculator/services/simulator.service';
 
 @Component({
-  selector: 'app-principal-layout',
-  templateUrl: './principal-layout.component.html',
-  styleUrl: './principal-layout.component.css',
+    selector: 'app-principal-layout',
+    templateUrl: './principal-layout.component.html',
+    styleUrl: './principal-layout.component.css',
+    standalone: false
 })
 export class PrincipalLayoutComponent {
   private simulatorService = inject(SimulatorService);

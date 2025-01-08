@@ -2,8 +2,8 @@ import { Component, inject, OnInit, effect } from '@angular/core';
 import { SimulatorService } from '../../services/simulator.service';
 
 @Component({
-  selector: 'app-simulator',
-  template: `
+    selector: 'app-simulator',
+    template: `
     <div
       class="d-flex flex-column justify-content-between align-items-stretch align-content-between h-100"
     >
@@ -15,6 +15,7 @@ import { SimulatorService } from '../../services/simulator.service';
       <app-quotation></app-quotation>
     </div>
   `,
+    standalone: false
 })
 export class SimulatorComponent implements OnInit {
   private _simulatorService = inject(SimulatorService);

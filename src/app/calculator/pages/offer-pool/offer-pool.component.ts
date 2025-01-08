@@ -3,9 +3,10 @@ import { SimulatorService } from '../../services/simulator.service';
 import { Offer } from '../../interfaces/simulator';
 
 @Component({
-  selector: 'app-offer-pool',
-  templateUrl: './offer-pool.component.html',
-  styleUrl: './offer-pool.component.css',
+    selector: 'app-offer-pool',
+    templateUrl: './offer-pool.component.html',
+    styleUrl: './offer-pool.component.css',
+    standalone: false
 })
 export class OfferPoolComponent implements OnInit {
   @Input() selectedCategory: string = 'Todas';
