@@ -17,36 +17,30 @@ import { NotFoundComponent } from './calculator/pages/not-found/not-found.compon
 
 import { PrincipalLayoutComponent } from './shared/layouts/principal-layout.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 import { DiscountComponent } from './shared/components/discount/discount.component';
 import { InputMaskModule } from '@ngneat/input-mask';
 import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    NotFoundComponent,
-    PrincipalLayoutComponent,
-    DiscountComponent,
-  ],
-  imports: [
-    AppRoutingModule,
-    BrowserModule,
-    CommonModule,
-    HttpClientModule,
-    RouterOutlet,
-    InputMaskModule.forRoot({ inputSelector: 'input', isAsync: true }),
-  ],
-  providers: [
-    NgxBootstrapExpandedFeaturesService,
-    provideAnimationsAsync(),
-    { provide: APP_BASE_HREF, useValue: '/' },
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-  ],
-  bootstrap: [AppComponent],
-  exports: [DiscountComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomePageComponent,
+        NotFoundComponent,
+        PrincipalLayoutComponent,
+        DiscountComponent,
+    ],
+    bootstrap: [AppComponent],
+    exports: [DiscountComponent], imports: [AppRoutingModule,
+        BrowserModule,
+        CommonModule,
+        RouterOutlet,
+        InputMaskModule.forRoot({ inputSelector: 'input', isAsync: true })], providers: [
+        NgxBootstrapExpandedFeaturesService,
+        provideAnimationsAsync(),
+        { provide: APP_BASE_HREF, useValue: '/' },
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule {}
