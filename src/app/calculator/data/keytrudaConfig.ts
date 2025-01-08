@@ -2,7 +2,7 @@ export const KeytrudaConfig = {
 segmento: [
   {
     title: 'HOSPITALES',
-    pmp: 99234.43,
+    pmp: 103203.64,
     comertialOffer: function(){return this.pmp * .04},
     initialOfferPrice: function(){return this.pmp * 0.96},
     comertialOfferPercentage: 4,
@@ -21,7 +21,7 @@ segmento: [
   },
   {
     title: `CENTROS ONCOLÓGICOS TOP PREMIUM`,
-    pmp: 99234.43,
+    pmp: 103203.64,
     comertialOffer: function(){return this.pmp * .10},
     initialOfferPrice: function(){return this.pmp * 0.90},
     comertialOfferPercentage: 10,
@@ -40,7 +40,7 @@ segmento: [
   },
   {
     title: 'CENTROS ONCOLÓGICOS TIER 1',
-    pmp: 99234.43,
+    pmp: 103203.64,
     comertialOffer: function(){return this.pmp * 0.10},
     initialOfferPrice: function(){return this.pmp * 0.90},
     comertialOfferPercentage: 10,
@@ -59,7 +59,7 @@ segmento: [
   },
   {
     title: 'CENTROS ONCOLÓGICOS TIER 2',
-    pmp: 99234.43,
+    pmp: 103203.64,
     comertialOffer: function(){return this.pmp * 0.08},
     initialOfferPrice: function(){return this.pmp * 0.92},
     comertialOfferPercentage: 8,
@@ -78,7 +78,7 @@ segmento: [
   },
   {
     title: 'CENTROS ONCOLÓGICOS TIER 3',
-    pmp: 99234.43,
+    pmp: 103203.64,
     comertialOffer: function(){return this.pmp * 0.08},
     initialOfferPrice: function(){return this.pmp * 0.92},
     comertialOfferPercentage: 8,
