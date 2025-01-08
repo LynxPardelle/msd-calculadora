@@ -24,7 +24,7 @@
     "@ngneat/input-mask": "^6.1.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "ngx-bootstrap-expanded-features": "^1.4.3",
+    "ngx-bootstrap-expanded-features": "^1.4.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
