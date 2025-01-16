@@ -18,13 +18,16 @@ export class TopCostumersComponent implements OnInit {
   onValuesChange(event: Event) {
     const target = event.target as HTMLInputElement;
     const value = Number(target.value);
-    this.topClientsValues.set({
-      ...this.topClientsValues(),
-      [target.name]: Number(value.toFixed(2)),
+    this._simulatorService.setTopClientsValues({
+      [target.name]: Number(value.toFixed(2))
     });
   }
 
   ngOnInit(): void {
     this._simulatorService.enableDiscount = false;
+  }
+
+  onComercialPlanChange(value: number) {
+    this._simulatorService.setTopClientsValues({ comercialPlan: value });
   }
 }

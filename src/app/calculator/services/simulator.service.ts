@@ -24,7 +24,7 @@ export class SimulatorService {
   public enableInventarioYCaducidades: boolean = false;
   public inventariosCaducidadesUrl: string = '';
   public logoUrl: string = './assets/images/slide2/B01_LogoTitulo.png';
-  topClientsGardasilPrice: number = 2506.6;
+  topClientsGardasilPrice: number = 2711.14;
 
   simulatorDiscountValue = signal<number>(0);
   simulatorObjectiveValue = signal<number>(0);
@@ -55,10 +55,17 @@ export class SimulatorService {
   topClientsValues = signal<TopClients>({
     unit: 0,
     objective: 0,
-    comercialPlan: 4,
+    comercialPlan: 4 ,
     totalNC: 0,
     ncPeerPiece: 0,
   });
+
+  setTopClientsValues(values: Partial<TopClients>) {
+    this.topClientsValues.update(currentValues => ({
+      ...currentValues,
+      ...values
+    }));
+  }
 
   computedQuotation = computed<ProductsQuotation>((): ProductsQuotation => {
     const montoTotalHospitalPmp = this.simulatorItemValues().reduce(

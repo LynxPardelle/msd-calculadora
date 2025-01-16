@@ -23,22 +23,16 @@
   },
   {
     "idProduct": 7,
-    "productName": "ONICIT SOL. INY FA 1.5 ML",
-    "pmp": 1601.98
-  },
-  { "idProduct": 8, "productName": "ONICIT SOL. INY FA 5 ML", "pmp": 5331.54 },
-  {
-    "idProduct": 9,
     "productName": "ESMERON CAJA CON 10 FRASCOS 5MG/5ML",
     "pmp": 4374.81
   },
   {
-    "idProduct": 10,
+    "idProduct": 8,
     "productName": "SIVEXTRO IV 200MG 6VIAL MEX",
     "pmp": 37942.23
   },
   {
-    "idProduct": 11,
+    "idProduct": 9,
     "productName": "ZERBAXA 1G/0.5G 10X20ML VIAL MEX ",
     "pmp": 34182.70
   }

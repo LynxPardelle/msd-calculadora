@@ -39,9 +39,10 @@
             <input name="comercialPlan" type="text" class="form-control text-center"
               [value]="topClientsValues().comercialPlan | percent" (keyup)="onValuesChange($event)" />
               -->
-            <span class="form-control text-center"
-              >{{ topClientsValues().comercialPlan }}%</span
-            >
+              <select class="form-control text-center" [(ngModel)]="topClientsValues().comercialPlan" (ngModelChange)="onComercialPlanChange($event)">
+                <option [value]="4">4%</option>
+                <option [value]="5">5%</option>
+              </select>
           </div>
           <div class="col-3">
             <span class="form-control text-center ms-3">{{
@@ -87,7 +88,7 @@
             Precio Sugerido Gardasil 9
           </h2>
           <p class="bg-white py-3 px-3 text-center rounded-4 mb-2 w-50 fs-alt">
-            {{ 3094 | currency }}
+            {{ 2711.14 | currency }}
           </p>
           <p class="ms-3 mb-0 fw-light fs-alt">
             *Precio Ponderado en el mercado

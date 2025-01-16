@@ -17,6 +17,7 @@ import { FaqComponent } from './components/faq/faq/faq.component';
 import { NgxBootstrapExpandedFeaturesService } from 'ngx-bootstrap-expanded-features';
 import { ExistsDirective } from './directives/exists.directive';
 import { LineBreakerSpecializedPipe } from '../shared/pipes/line-breaker-specialized.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LineBreakerSpecializedPipe } from '../shared/pipes/line-breaker-special
   ],
   imports: [
     CommonModule,
+    FormsModule,
     CalculatorRoutingModule,
     InputMaskModule,
     DecimalPipe,
