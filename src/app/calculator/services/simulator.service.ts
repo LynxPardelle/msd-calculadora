@@ -33,7 +33,7 @@ export class SimulatorService {
       ...product,
       unit: 0,
       pmpTotalAmount: 0,
-      suggestedPrice: product.pmp,
+      suggestedPrice: product.suggestedPrice,
       suggestedPriceTotalAmount: 0,
       transferPriceTotalAmount: 0,
     }))
@@ -44,7 +44,7 @@ export class SimulatorService {
       ...product,
       unit: 0,
       pmpTotalAmount: 0,
-      suggestedPrice: product.pmp,
+      suggestedPrice: product.suggestedPrice,
       suggestedPriceTotalAmount: 0,
       transferPriceTotalAmount: 0,
       itemDiscount: 0,

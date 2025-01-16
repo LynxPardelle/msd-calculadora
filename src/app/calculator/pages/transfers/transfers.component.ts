@@ -2,9 +2,9 @@ import { Component, inject, OnInit } from '@angular/core';
 import { SimulatorService } from '../../services/simulator.service';
 
 @Component({
-  selector: 'app-transfers',
-  styleUrl: './transfers.component.css',
-  template: `
+    selector: 'app-transfers',
+    styleUrl: './transfers.component.css',
+    template: `
     <div
       class="d-flex flex-column justify-content-between align-items-stretch align-content-between h-100"
     >
@@ -39,6 +39,7 @@ import { SimulatorService } from '../../services/simulator.service';
       </div>
     </div>
   `,
+    standalone: false
 })
 export class TransfersComponent implements OnInit {
   private _simulatorService = inject(SimulatorService);

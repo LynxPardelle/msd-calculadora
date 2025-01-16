@@ -3,9 +3,10 @@ import { SimulatorService } from '../../../../services/simulator.service';
 import { createMask } from '@ngneat/input-mask';
 
 @Component({
-  selector: 'app-quotation',
-  templateUrl: './quotation.component.html',
-  styleUrl: './quotation.component.css',
+    selector: 'app-quotation',
+    templateUrl: './quotation.component.html',
+    styleUrl: './quotation.component.css',
+    standalone: false
 })
 export class QuotationComponent {
   private _SimulatorService = inject(SimulatorService);

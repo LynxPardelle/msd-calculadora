@@ -2,9 +2,10 @@ import { Component, inject } from '@angular/core';
 import { SimulatorService } from '../../../../services/simulator.service';
 
 @Component({
-  selector: 'app-transfers-quotation',
-  templateUrl: './transfers-quotation.component.html',
-  styleUrl: './transfers-quotation.component.css',
+    selector: 'app-transfers-quotation',
+    templateUrl: './transfers-quotation.component.html',
+    styleUrl: './transfers-quotation.component.css',
+    standalone: false
 })
 export class TransfersQuotationComponent {
   private _SimulatorService = inject(SimulatorService);

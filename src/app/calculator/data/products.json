@@ -1,39 +1,46 @@
 [
-  { "idProduct": 1, "productName": "CANCIDAS 50MG SOL INY", "pmp": 8392.36 },
+  { "idProduct": 1, "productName": "CANCIDAS 50MG SOL INY", "pmp": 8811.98, "suggestedPrice": 8313.18 },
   {
     "idProduct": 2,
     "productName": "EMEND CAPSULAS 125 MG y 280 MG",
-    "pmp": 2367.81
+    "pmp": 2462.52,
+    "suggestedPrice": 2462.52
   },
-  { "idProduct": 3, "productName": "EMEND IV 150MG IV VIAL", "pmp": 3493.82 },
+  { "idProduct": 3, "productName": "EMEND IV 150MG IV VIAL", "pmp": 3633.57, "suggestedPrice": 3633.57 },
   {
     "idProduct": 4,
     "productName": "INVANZ FRASCO ÁMPULA POLVO 1GR INY",
-    "pmp": 2139.86
+    "pmp": 2246.85,
+    "suggestedPrice": 2119.67
   },
   {
     "idProduct": 5,
     "productName": "CUBICIN 500MG 10ML 1DOSE VIAL",
-    "pmp": 3655.89
+    "pmp": 3838.68,
+    "suggestedPrice": 3621.39
   },
   {
     "idProduct": 6,
     "productName": "BRIDION 100 MG/ML VIAL 2ML",
-    "pmp": 30523.2
+    "pmp": 30523.20,
+    "suggestedPrice": 28795.47
   },
   {
     "idProduct": 7,
     "productName": "ESMERON CAJA CON 10 FRASCOS 5MG/5ML",
-    "pmp": 4374.81
+    "pmp": 4374.81,
+    "suggestedPrice": 4127.18
   },
   {
     "idProduct": 8,
     "productName": "SIVEXTRO IV 200MG 6VIAL MEX",
-    "pmp": 37942.23
+    "pmp": 39839.35,
+    "suggestedPrice": 37584.32
   },
   {
-    "idProduct": 9,
-    "productName": "ZERBAXA 1G/0.5G 10X20ML VIAL MEX ",
-    "pmp": 34182.70
+    "idProduct": 11,
+    "productName": "ZERBAXA 1G/0.5G 10X20ML VIAL MEX",
+    "pmp": 35891.84,
+    "suggestedPrice": 33860.23
   }
 ]

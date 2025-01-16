@@ -2,8 +2,8 @@ import { Component, inject, effect, OnInit, Input } from '@angular/core';
 import { SimulatorService } from '../../../calculator/services/simulator.service';
 
 @Component({
-  selector: 'app-discount',
-  template: `
+    selector: 'app-discount',
+    template: `
     <div class="d-flex flex-row align-items-center gap-3 m-3">
       @if(enableDiscount) {
       <div class="d-flex flex-row align-items-center gap-3 m-3 customText">
@@ -33,7 +33,7 @@ import { SimulatorService } from '../../../calculator/services/simulator.service
       }
     </div>
   `,
-  styles: `
+    styles: `
   .customText { font-size: 1.3rem; font-family:'customGothamBold'; }
   .customInput, .input-group-text{
     border-radius: 1.5rem;
@@ -88,6 +88,7 @@ import { SimulatorService } from '../../../calculator/services/simulator.service
   justify-content: center;
 }
   `,
+    standalone: false
 })
 export class DiscountComponent {
   private _simulatorService = inject(SimulatorService);
