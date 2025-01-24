@@ -82,7 +82,7 @@ segmento: [
     comertialOffer: function(){return this.pmp * 0.08},
     initialOfferPrice: function(){return this.pmp * 0.92},
     comertialOfferPercentage: 8,
-    comertialPlan: 2,
+    comertialPlan: 3,
     comertialPlanFinalPrice: function() {return this.pmp * 0.90},
     rentabilityPerPiece: function() {return this.pmp * 0.10},
     rentabilityPerCycle: function() {return this.rentabilityPerPiece() * 2},

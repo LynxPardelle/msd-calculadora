@@ -72,25 +72,19 @@ export class SimulatorService {
       (acc, product) => acc + product.pmpTotalAmount,
       0
     );
-    console.log('montoTotalHospitalPmp', montoTotalHospitalPmp);
     const montoTotalPrecioSugerido = this.simulatorItemValues().reduce(
       (acc, product) => acc + product.suggestedPriceTotalAmount,
       0
     );
-    console.log('montoTotalPrecioSugerido', montoTotalPrecioSugerido);
     const montoTotalPrecioTransfer = this.simulatorItemValues().reduce(
       (acc, product) => acc + (product.transferPriceTotalAmount || 0),
       0
     );
-    console.log('montoTotalPrecioTransfer', montoTotalPrecioTransfer);
     const objetivoTrimestral = this.simulatorObjectiveValue();
-    console.log('objetivoTrimestral', objetivoTrimestral);
     const variacionDescuento =
       montoTotalHospitalPmp / montoTotalPrecioSugerido - 1;
-    console.log('variacionDescuento', variacionDescuento);
     const variacionDescuentoSugerido =
       1 - montoTotalPrecioTransfer / montoTotalPrecioSugerido;
-    console.log('variacionDescuentoSugerido', variacionDescuentoSugerido);
     return {
       montoTotalHospitalPmp,
       montoTotalPrecioSugerido,
@@ -111,21 +105,16 @@ export class SimulatorService {
       (acc, product) => acc + product.pmpTotalAmount,
       0
     );
-    console.log('montoTotalHospitalPmp', montoTotalHospitalPmp);
     const montoTotalPrecioSugerido = this.simulatorItemValues2().reduce(
       (acc, product) => acc + product.suggestedPriceTotalAmount,
       0
     );
-    console.log('montoTotalPrecioSugerido', montoTotalPrecioSugerido);
     const montoTotalNotaDeCredito = 0;
-    console.log('montoTotalNotaDeCredito', montoTotalNotaDeCredito);
     const montoTotalPrecioTransfer = this.simulatorItemValues2().reduce(
       (acc, product) => acc + (product.transferPriceTotalAmount || 0),
       0
     );
-    console.log('montoTotalPrecioTransfer', montoTotalPrecioTransfer);
     const objetivoTrimestral = this.simulatorObjectiveValue();
-    console.log('objetivoTrimestral', objetivoTrimestral);
     return {
       montoTotalHospitalPmp,
       montoTotalPrecioSugerido,
@@ -167,7 +156,8 @@ export class SimulatorService {
       this.logoUrl = './assets/images/slide2/B01_LogoTitulo.png';
       if (url.includes('simulator')) {
         this.inventariosCaducidadesUrl =
-          'https://www.google.com/url?q=https://app.powerbi.com/singleSignOn?experience%3Dpower-bi%26ru%3Dhttps%253A%252F%252Fapp.powerbi.com%252Fgroups%252Fme%252Freports%252F83b3455d-acc1-4eaf-8660-6fdf027ae4aa%252FReportSectionf86d32d8d0dc1c674701%253Fexperience%253Dpower-bi%2526noSignUpCheck%253D1&sa=D&source=editors&ust=1721341001893530&usg=AOvVaw03pMrHakhKtuekvSOgvhXo';
+        'https://app.powerbi.com/groups/me/reports/8b7bb382-1e40-4b70-ba00-251d9687eb55/ReportSectionac2db87d0ea50f28d1df?ctid=a00de4ec-48a8-43a6-be74-e31274e2060d&experience=power-bi&clientSideAuth=0';
+        // 'https://www.google.com/url?q=https://app.powerbi.com/singleSignOn?experience%3Dpower-bi%26ru%3Dhttps%253A%252F%252Fapp.powerbi.com%252Fgroups%252Fme%252Freports%252F83b3455d-acc1-4eaf-8660-6fdf027ae4aa%252FReportSectionf86d32d8d0dc1c674701%253Fexperience%253Dpower-bi%2526noSignUpCheck%253D1&sa=D&source=editors&ust=1721341001893530&usg=AOvVaw03pMrHakhKtuekvSOgvhXo';
         this.enableInventarioYCaducidades = true;
       } else if (url.includes('transfers')) {
         this.inventariosCaducidadesUrl =

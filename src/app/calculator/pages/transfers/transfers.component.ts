@@ -2,9 +2,9 @@ import { Component, inject, OnInit } from '@angular/core';
 import { SimulatorService } from '../../services/simulator.service';
 
 @Component({
-    selector: 'app-transfers',
-    styleUrl: './transfers.component.css',
-    template: `
+  selector: 'app-transfers',
+  styleUrl: './transfers.component.css',
+  template: `
     <div
       class="d-flex flex-column justify-content-between align-items-stretch align-content-between h-100"
     >
@@ -39,34 +39,26 @@ import { SimulatorService } from '../../services/simulator.service';
       </div>
     </div>
   `,
-    standalone: false
+  standalone: false
 })
 export class TransfersComponent implements OnInit {
   private _simulatorService = inject(SimulatorService);
 
   get products() {
     return this._simulatorService.simulatorItemValues2().filter((item) => {
-      if ([4, 6, 9].includes(item.idProduct)) {
-        // console.log(item);
-        return item;
-      } else {
-        return null;
-      }
+      return [4, 6, 7].includes(item.idProduct);
     });
   }
   get reSortedProducts() {
-    let prods = this._simulatorService.simulatorItemValues2().filter((item) => {
-      if ([4, 6, 9].includes(item.idProduct)) {
-        // console.log(item);
-        return item;
-      } else {
-        return null;
-      }
+    const prods = this._simulatorService.simulatorItemValues2().filter((item) => {
+      return [4, 6, 7].includes(item.idProduct) && item !== undefined;
     });
-    let temp = prods[1];
-    prods[1] = prods[0];
-    prods[0] = prods[2];
-    prods[2] = temp;
+    if (prods.length < 1) {
+      const temp = prods[1] || prods[0];
+      if (prods[1]) prods[1] = prods[0];
+      prods[0] = prods[2] || prods[1];
+      if (prods[2]) prods[2] = temp;
+    }
     return prods;
   }
 
