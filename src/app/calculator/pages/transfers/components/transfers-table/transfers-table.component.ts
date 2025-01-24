@@ -87,11 +87,9 @@ export class TransfersTableComponent {
     const value = target.value.replace(' %', '');
     let discount = parseFloat(value);
     this.showPopUp = discount > 16.66 ? 2 : discount > 10 ? 1 : 0;
-    console.log(discount);
     if (discount > 16.66) {
       discount = 16.66;
     }
-    console.log(discount);
 
     this._simulatorService.simulatorItemValues2.set(
       this.productItems.map((productItem) => {

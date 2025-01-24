@@ -20,8 +20,6 @@ export class OfferPoolComponent implements OnInit {
 
     const orderCategories = chaosCategories.flat();
     const uniqueCategories = ['Todas', ...new Set(orderCategories)];
-    console.log(uniqueCategories);
-
     return uniqueCategories;
   }
 

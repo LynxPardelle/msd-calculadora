@@ -11,7 +11,6 @@ export class LineBreakerSpecializedPipe implements PipeTransform {
         value.replace('COS ', 'COS║║║').split('║║║')[0] +
         `<br />` +
         value.replace('COS ', 'COS║║║').split('║║║')[1];
-      console.log(value);
     }
     return value;
   }

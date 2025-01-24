@@ -29,11 +29,9 @@ export class QuotationComponent {
 
   onChangeTrimestralObjetiveValue(event: Event) {
     const target = event.target as HTMLInputElement;
-    console.log('onChangeTrimestralObjetiveValue', target.value);
     const value = parseFloat(
       target.value.replace(/\$/, '').replace(/,/g, '').trim()
     );
-    console.log('onChangeTrimestralObjetiveValue', value);
     this._SimulatorService.simulatorObjectiveValue.set(value);
   }
 }

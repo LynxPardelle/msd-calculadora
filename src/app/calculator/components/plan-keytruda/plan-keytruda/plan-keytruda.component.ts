@@ -73,7 +73,6 @@ export class PlanKeytrudaComponent implements OnInit {
   }
 
   openFaqModal(open: boolean = true) {
-    console.log('openFaqModal', open);
     this.showFaqModal = open;
   }
 }

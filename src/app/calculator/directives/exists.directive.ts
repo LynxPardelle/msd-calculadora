@@ -11,7 +11,6 @@ export class ExistsDirective implements OnInit {
 
   ngOnInit(): void {
     if (this.appExists) {
-      console.log('this.appExists', this.appExists);
       setTimeout(() => {
         this.initEvent.emit();
       }, this.time);

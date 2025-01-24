@@ -18,7 +18,6 @@ export class KeytrudaService {
     let data = this.keytrudaConfig.segmento.find(
       (segmento) => segmento.title === title
     );
-    console.log(data);
     this.keytrudaCalculatorDataSubject.next({
       page: data!.title,
       unitsPerProduct: '',
