@@ -161,7 +161,8 @@ export class SimulatorService {
         this.enableInventarioYCaducidades = true;
       } else if (url.includes('transfers')) {
         this.inventariosCaducidadesUrl =
-          'https://www.google.com/url?q=https://app.powerbi.com/groups/me/reports/83b3455d-acc1-4eaf-8660-6fdf027ae4aa/ReportSectionf86d32d8d0dc1c674701?experience%3Dpower-bi&sa=D&source=editors&ust=1720212778799132&usg=AOvVaw0fgkABUEslHsWIwsCKqT61';
+        'https://app.powerbi.com/groups/me/reports/8b7bb382-1e40-4b70-ba00-251d9687eb55/ReportSectionac2db87d0ea50f28d1df?ctid=a00de4ec-48a8-43a6-be74-e31274e2060d&experience=power-bi&clientSideAuth=0';
+          // 'https://www.google.com/url?q=https://app.powerbi.com/groups/me/reports/83b3455d-acc1-4eaf-8660-6fdf027ae4aa/ReportSectionf86d32d8d0dc1c674701?experience%3Dpower-bi&sa=D&source=editors&ust=1720212778799132&usg=AOvVaw0fgkABUEslHsWIwsCKqT61';
         this.enableInventarioYCaducidades = true;
       } else if (url.includes('top-costumers')) {
         this.logoUrl = './assets/images/slide4/D01_LogoTitulo.png';
